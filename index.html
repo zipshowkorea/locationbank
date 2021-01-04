@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en kor">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>pickture</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Teko:300,400" rel="stylesheet">
+  <!--CSS-->
+  <link href="source/css/bootstrap.min.css" rel="stylesheet">
+  <link href="source/css/datepicker.min.css" rel="stylesheet">
+  <link href="source/css/jquery.timepicker.min.css" rel="stylesheet">
+  <link href="source/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+ 
+  <!--Favicons-->
+  <link href="source/img/logo.svg" rel="apple-touch-icon" sizes="180x180">
+  <link href="source/img/logo.svg" rel="icon" sizes="32x32" type="image/png">
+  <link href="source/img/logo.svg" rel="icon" sizes="16x16" type="image/png">
+  <link href="source/img/logo.svg" rel="manifest">
+  <link color="#5bbad5" href="source/img/logo.svg" rel="mask-icon">
+  <link href="source/img/logo.svg" rel="shortcut icon">
+  <meta content="#da532c" name="msapplication-TileColor">
+  <meta content="favicons/browserconfig.xml" name="msapplication-config">
+  <meta content="#ffffff" name="theme-color">
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="source/js/datepicker.min.js"></script>
+  <script src="source/js/jquery.timepicker.min.js"></script>
+  <script src="source/js/resize.js"></script>
+  <script src="source/js/script.js"></script>
+  <script src="source/js/count.js"></script>
+
+  <!-- 3D 모델 삽입 라이브러리 -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+
+</head>
+
+<body id="sub">
+  <header class="header">
+    <div class="header-container">
+      <div class="header-wrap">
+        <div class="header-inner row">
+          <h1 class="logo">
+            <a href="index.html" class="header-logo">
+              <img src="source/img/logo.svg" alt="로케이션뱅크 로고">
+            </a>
+          </h1>
+          <div id="searchTop" class="col-lg-8 col-md-6 col-sm-4">
+            <span class="search_title">L</span>
+            <span class="search_title change">O</span>
+            <div id="searchInput">
+              <input type="search" placeholder="cation bank" autofocus="">
+              <button class="search">
+                <img src="source/img/search_icon.png" alt="검색 아이콘">
+              </button>
+            </div>
+        </div>
+          <button class="ham_btn" type="button">
+            <span class="ham_btn-inner"></span>
+          </button>
+        </div>
+        <div id="gnb">
+          <ul>
+            <li><a href="intro.html">소개</a></li>
+            <li><a href="partnership.html">제휴문의</a></li>
+            <li><a href="../service.html">로케이션뱅크</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap row">
+    <section id="detail" class="col-lg-8 col-md-12 col-sm-10">
+      <iframe src="https://zipshowkorea.com/d2/jbuXvkLMrQb.html" frameborder="0" width="100%" height="100%" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+      <div id="detail-intro">
+        <div class="row">
+          <div id="basic-info"  class="col-lg-6 col-md-6 col-sm-12" >
+            <p class="intro-title">장소소개</p>
+            <p>
+              근정전(勤政殿)은 조선의 법궁인 경복궁의 정전으로, 다포계 팔작 지붕의 중층 건물이다. 현재 근정전은 국보 223호로 지정되어 있는 현존하는 한국 최대의 목조 건축물 중 하나이다. 1395년 조선 태조가 조선의 정궁으로 경복궁을 조성할 때, 중추를 이루는 건물로 중건되었다.
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6324.458334161763!2d126.97931962745119!3d37.573221022605374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca35f9698b965%3A0x34606333d799ee0!2z6re87KCV7KCE!5e0!3m2!1sko!2skr!4v1604414441408!5m2!1sko!2skrr" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <strong>주소</strong>
+            <span>서울특별시 종로구 삼청로 37, 경복궁</span><br>
+            <strong>연락처</strong>
+            <span>+82-02-3210-1645</span><br>
+            <strong>홈페이지</strong>
+            <span><a href="http://www.gongseri.or.kr/">http://www.gongseri.or.kr/</a></span>
+            <button type="button" id="model3D">3D모델 보기</button>
+          </div>
+          <div id='info-icon' class="col-lg-6 col-md-6 col-sm-12">
+            <p class="intro-title">조명 시설</p>
+            <ul class="row">
+              <li><img src="source/img/icon/celing_off.png" alt="천정바텐 없음"></li>
+              <li><img src="source/img/icon/power_generation_car_off.png" alt="발전차 없음"></li>
+              <li><img src="source/img/icon/continues_light_off.png" alt="지속광 없음"></li>
+              <li><img src="source/img/icon/strobe_off.png" alt="스트로보 없음"></li>
+            </ul>
+            <p class="intro-title">내부 편의 시설</p>
+            <ul class="row">
+              <li><img src="source/img/icon/dressroom_off.png" alt="드레스룸 없음"></li>
+              <li><img src="source/img/icon/makeuproom_off.png" alt="메이크업룸 없음"></li>
+              <li><img src="source/img/icon/restroom_off.png" alt="실내화장실 없음"></li>
+              <li><img src="source/img/icon/air_conditioner_on.png" alt="냉방시설 있음"></li>
+              <li><img src="source/img/icon/heater_on.png" alt="난방시설 있음"></li>
+              <li><img src="source/img/icon/controlroom_off.png" alt="실내화장실 없음"></li>
+              <li><img src="source/img/icon/restroom_off.png" alt="부조실 없음"></li>
+              <li><img src="source/img/icon/paint_off.png" alt="페인트 불가능"></li>
+            </ul>
+            <p class="intro-title">외부 편의 시설</p>
+            <ul class="row">
+              <li><img src="source/img/icon/parking_on.png" alt="주차가능"></li>
+              <li><img src="source/img/icon/transportation_off.png" alt="도보 10분 이내 대중교통 없음"></li>
+              <li><img src="source/img/icon/restaurant_on.png" alt="도보 10분 이내 식당가 있음"></li>
+              <li><img src="source/img/icon/accommodation_off.png" alt="도보 10분 이내 숙박시설 없음"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="col-lg-4 col-md-12"  onload="init();">
+      <div id="pay"  style="position: sticky; top: 82px;">
+        <div class="row">
+          <p id="location-category">궁/서울</p>
+          <h2 id="location-title">경복궁 - 근정전</h2>
+          <div id="score" class="row">
+            <span><img src="source/img/icon/unfill_star_detail.png" alt="평점"></span>
+            <span><img src="source/img/icon/unfill_star_detail.png" alt="평점"></span>
+            <span><img src="source/img/icon/unfill_star_detail.png" alt="평점"></span>
+            <span><img src="source/img/icon/unfill_star_detail.png" alt="평점"></span>
+            <span><img src="source/img/icon/unfill_star_detail.png" alt="평점"></span>
+          </div>
+          <div id="price">
+            <p><strong>50,000</strong><span>원/시간당</span></p>
+          </div>
+        </div>
+        <hr>
+        <form name="form" method="get">
+          <p class="pay-title">촬영 스케줄 선택</p>
+          <div id="reservation-schedule" class="col-lg-12 row">
+            <input id="start-date" name="start-date" type="text" placeholder="시작일" class="col-lg-3 col-md-3 col-sm-5" >
+            <input id="start-time" name="start-time" type="text" placeholder="시간" class="col-lg-2 col md-2 col-sm-5">
+            <span  class="col-lg-1">~</span>
+            <input id="end-date" name="end-date" type="text" placeholder="종료일" class="col-lg-3 col-md-3 col-sm-5">
+            <input id="end-time" name="end-time"type="text" placeholder="시간" class="col-lg-2 col md-2 col-sm-5" >
+          </div>
+          <hr>
+          <p class="pay-title">촬영 인원 선택</p>
+          <div id="reservation-people" class="row">
+            <input type="button" value="-" onclick="del();" class="col-lg-2">
+            <input type="hidden" name="price" value="11000">
+            <input type="text" name="amount" value="1" onchange="change()" class="col-lg-8" >
+            <input type="button" value="+" onclick="add();" class="col-lg-2">
+            <input type="hidden" name="sum">
+          </div>
+          <hr>
+          <dl id="pay-total" class="row">
+            <dt>촬영 스케줄</dt>
+            <dd>
+              <span id="setStartDay"></span><span id="setStartTime"></span>
+              ~
+              <span id="setEndDay"></span><span id="setEndTime"></span>
+            </dd>
+            <dt>촬영 시간</dt>
+            <dd><span class="terms">0 시간</span> X <span class="price"></span> 원</dd>
+            <dt>촬영 인원</dt>
+            <dd><span id="user"></span> 명 </span>추가금액 <span id="addPay">0</span> 원</dd>
+            <dt>총 금액</dt>
+            <dd><span id="total"></span> 원</dd>
+          </dl>
+        </form>
+        <p class="des">총 금액에는 서비스 수수료 및 부가세(VAT)가 포함되어 있습니다.</p>
+        <button type="submit" id="submit">예약 가능 여부 확인하기</button>
+        <p class="des">우선호스트에게 촬영이 가능한지 확인해보세요<br>'예약 가능 여부 확인하기" 단계에서는 요금이 청구되지 않습니다.</p>
+      </div>
+    </section>
+  </main>
+  <section id="modal">
+    <div class="row col-lg-10 col-md-10 col-sm-10">
+      <div class="col-lg-7">
+        <model-viewer src="goheung_villige.glb" alt="KOREAN BELL" auto-rotate="true" camera-controls="false" data-js-focus-visible="" ar-status="not-presenting"></model-viewer>
+      </div>
+      <div class="col-lg-5">
+        <div id="pay3D">
+          <h2>전통문 3D 모델</h2>
+          <p id="modelDes">전통문 3D 모델을 다운받아 당신의 영상, 혹은 vr 콘텐츠에 배치해보세요.</p>
+          <a href="https://zipshowkorea.github.io/locationbank_/contents/detail/scene.gltf" download>
+            <button type="button" name="download">다운로드</button>
+          </a>
+          <div id="model-info" >
+            <div class="row">
+              <span class="model-info_title col-6">
+                License
+              </span>
+              <span class="model-info_des col-6">
+                Standard
+                <a href="#none">Learn more</a>
+              </span>
+            </div>
+            <div class="row">
+              <span class="model-info_title col-6">
+                Inlcuded 3D formats
+              </span>
+              <span class="model-info_des col-6">
+                <p>
+                  Autodest Fbf (fbx)
+                </p>
+                <p>
+                  Generated gLTF(gltf)
+                </p>
+                <p>
+                  Genreated USDZ(usdz)
+                </p>
+              </span>
+            </div>
+            <div class="row">
+              <span class="model-info_title col-6">
+                Compatible with
+              </span>
+              <span class="model-info_des col-6">
+                <a href="#none" class="model-info_link">
+                  <svg width="20" height="20" class="c-model-3d-information__icon --unity"><path d="M17.812 0l-8.17 2.129-1.209 2.075-2.453-.018L0 10l5.98 5.815 2.452-.018 1.212 2.073L17.812 20 20 12.058l-1.243-2.057L20 7.944 17.812 0zM8.63 4.538l6.25-1.562-3.588 6.043H4.116L8.63 4.538zm0 10.926l-4.514-4.482h7.176l3.587 6.044-6.249-1.562zm7.998.58L13.039 10l3.589-6.044L18.36 10l-1.733 6.042z"></path></svg>
+                </a>
+                <a href="#none" class="model-info_link">
+                  <svg width="20" height="20" class="c-model-3d-information__icon --unreal"><path d="M.041 12.405s-.548-2.726 2.353-6.027c2.9-3.301 5.077-4.501 7.428-5.127l-.005.003.01-.003S7.98 2.327 7.98 3.952c0 .472.075.796.18 1.013.138.287.357.385.553.386.166 0 .263-.067.472-.149v8.803s.023.142.15.31c.184.242.472.537 1.014.54.924-.006 2.086-1.05 2.086-1.05V6.678c0-.725-.519-1.6-1.068-1.9 0 0 .075-.005.196-.005.363 0 1.142.041 1.576.373.12-.14 2.066-2.342 5.528-3.02 0 0 0 .002-.002.003l.01-.002S16.76 4.382 16.16 5.5c-.107.006-.123 2.121-.105 4.235.017 2.04.066 4.079.094 4.22 0 0 .204.304.725.306.586.003 1.575-.377 3.126-2.007 0 0-.04.093-.123.258-.445.887-2.096 3.864-5.028 5.594l-1.903-1.609-.049-.04-2.074 2.2-.004-.001s-4.73-.4-6.705-3.25c0 0 .004 0 .01.003l-.003-.003s.299.116.637.122c.395.008.81-.137.81-.798V8.028a.71.71 0 00-.752-.724c-.465 0-1.133.314-2.045 1.25-1.926 1.975-2.725 3.85-2.725 3.85l-.002-.007-.003.008" fill-rule="evenodd"></path></svg>
+                </a>
+                <a href="#none">More info</a>
+              </span>
+            </div>
+            <div class="row">
+              <span class="model-info_title col-6">
+                Download size
+              </span>
+              <span class="model-info_des col-6">
+                120MB
+                <a href="#none">see all files</a>
+              </span>
+            </div>
+            <div class="row">
+              <span class="model-info_title col-6">
+                Geometry
+              </span>
+              <span class="model-info_des col-6">
+                <p>Triangles 11.4k</p>
+                <p>Quads 5.4k</p>
+                <p>Polygons 32</p>
+                <p>Total Triangles 22.3k</p>
+              </span>
+            </div>
+            <div class="row">
+              <span class="model-info_title col-6">
+                Vertices
+              </span>
+              <span class="model-info_des col-6">
+                18.2k
+              </span>
+            </div>
+            <div class="row">
+              <span class="model-info_title col-6">
+                PBR
+              </span>
+              <span class="model-info_des col-6">
+                Metalness
+              </span>
+            </div>
+            <div class="row">
+              <span class="model-info_title col-6">
+                Texture
+              </span>
+              <span class="model-info_des col-6">
+                14
+              </span>
+            </div>
+            <div class="row">
+              <span class="model-info_title col-6">
+                Materials
+              </span>
+              <span class="model-info_des col-6">
+                21
+              </span>
+            </div>
+            <div class="row">
+              <span class="model-info_title col-6">
+                UV Layers
+              </span>
+              <span class="model-info_des col-6">
+                Yes
+              </span>
+            </div>
+            <div class="row">
+              <span class="model-info_title col-6">
+                Vertex colors
+              </span>
+              <span class="model-info_des col-6">
+                Yes
+              </span>
+            </div>
+            <div class="row">
+              <span class="model-info_title col-6">
+                Animations
+              </span>
+              <span class="model-info_des col-6">
+                0
+              </span>
+            </div>
+            <div class="row">
+              <span class="model-info_title col-6">
+                Rigged geometries
+              </span>
+              <span class="model-info_des col-6">
+                No
+              </span>
+            </div>
+            <div class="row">
+              <span class="model-info_title col-6">
+                Morph geometries
+              </span>
+              <span class="model-info_des col-6">
+                0
+              </span>
+            </div>
+            <div class="row">
+              <span class="model-info_title col-6">
+                Scale transformations
+              </span>
+              <span class="model-info_des col-6">
+                No
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="button" name="close" class="xi-close"></button>
+    </div>
+    <button type="button" name="close"></button>
+  </section>
+  <footer class="wrap row">
+    <div class="col-lg-1">
+      <a href="index.html"><h2><img src="source/img/logo.svg" alt="로케이션뱅크 로고"></h2></a>
+    </div>
+    <div class="col-lg-6">
+      <div id="company" class="row">
+        <p>(주)집쇼코리아</p>
+        <dl>
+          <dt>주소</dt>
+          <dd>인천광역시 부평구 부평대로 293 부평테크시티 908호</dd>
+          <dt>대표</dt>
+          <dd>홍상용</dd><br/>
+          <dt>사업자등록번호</dt>
+          <dd>338-88-01168</dd>
+          <dt>통신판매업신고번호</dt>
+          <dd>2020-인천부평-0929</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="col-lg-5">
+      <div id="service_link" class="row">
+        <a href="partnership.html">제휴문의</a>
+        <a href="ask.html">1:1 고객문의</a>
+        <a href="#none">정보처리방침</a>
+        <a href="serviceInfo.html">서비스 이용약관</a>
+        <a href="#none">사업자정보</a>
+      </div>
+      <p>집쇼코리아는 통신판매중개자이며 통신판매의 당사자가 아니라는 사실을 고지하며<br/>상품의 예약, 이용 및 환불 등과 관련한 의무와 책임은 각 판매자에게 있습니다.<?p>
+    </div>
+    <div id="copyright">
+      <small>ⓒ zipshowkorea Inc. All right Reserved.</small>
+    </div>
+  </footer>
+</body>
