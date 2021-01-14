@@ -1,0 +1,119 @@
+@import 'config';
+
+.wrap {
+    position: relative;
+    .host_info {
+        width: 70%;
+        margin: 0 auto;
+        fieldset {
+            font-size: 1.8rem;
+            border: none;
+
+            p {
+                font-size: 1.6rem;
+                line-height: 2.8rem;
+                color: #5d5d5d;
+            }
+
+            .alert {
+                color: #ff1f00;
+            }
+
+            legend {
+                font-size: 2.4rem;
+                line-height: 3.2rem;
+                font-weight: 700;
+            }
+
+            label {
+                display: block;
+                margin: 2rem  0 1rem;
+
+                &.essential {
+                    &:after {
+                        content: "*";
+                        color: #ff1f00;
+                    }
+                }
+            }
+            input {
+                display: block;
+                width: calc(100% - 2.2rem);
+                height: 4.5rem;
+                margin: 1rem 0 2rem;
+                border: 0.1rem solid #c4c4c4;
+                padding: 0 1rem;
+                font-size: 1.8rem;
+
+                &::placeholder {
+                    color: #c4c4c4;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            .grid {
+                width: 100%;
+                grid-template-columns: 5fr 1fr;
+                grid-gap: 1rem;
+
+                input {
+                    width: auto;
+                    margin: 0;
+                }
+
+                button {
+                    background-color: $point-color;
+                    color: #fff;
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                    border: none;
+                    cursor: pointer;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+
+        .host_company {
+            input:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    & > button {
+        display: block;
+        width: 18rem;
+        margin: 5rem auto;
+        padding: 1.2rem 0;
+        color: #fff;
+        background-color: #626262;
+        border: none;
+        font-size: 1.8rem;
+        font-weight: 700;
+        cursor: pointer;
+
+        &:focus {
+            outline: none;
+        }
+
+    }
+
+    input {
+        &:disabled {
+            background-color: #fff;
+        }
+    }
+
+    .modify {
+        position: sticky;
+        width: 7.5rem;
+        height: 7.5rem;
+        margin: 0;
+    }
+}

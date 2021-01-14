@@ -138,7 +138,7 @@ li {
 }
 
 .create_place .create_placeInfo input[type=file] {
-  display: block;
+  display: none;
 }
 
 .create_place .create_placeInfo label[for=img_file] {
@@ -196,12 +196,13 @@ li {
   display: inline;
 }
 
-.create_place .create_placeInfo .tag_list li:after, .create_place .create_placeInfo .caution_list li:after, .create_place .create_placeInfo .img_list li:after {
-  content: "X";
+.create_place .create_placeInfo .tag_list li button, .create_place .create_placeInfo .caution_list li button, .create_place .create_placeInfo .img_list li button {
+  background-color: transparent;
+  border: none;
   display: inline-block;
   color: #0078f0;
   margin-left: 1rem;
-  cursor: cursor;
+  cursor: pointer;
 }
 
 .create_place .create_placeInfo .img_list li {

@@ -1,0 +1,196 @@
+@import 'config';
+
+.create_place {
+    width: 57rem;
+    margin: 5rem auto;
+    
+    legend {
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 3.2rem;
+    }
+
+    label {
+        font-size: 1.8rem;
+        color: #000;
+        display: block;
+
+        &.essential {
+
+            position: relative;
+            &:after {
+                content: "*";
+                color: #ff1f00;
+            }
+        }
+    }
+    
+    .create {
+        &_category {
+            border: none;
+            padding: 0;
+
+            .grid {
+                width: 100%;
+                margin: 2rem 0;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 0.1rem;
+                padding: 0.1rem;
+                background-color: #c4c4c4;
+
+                input {
+                    display: none;
+                }
+
+                label {
+                    background-color: #fff;
+                    padding: 1rem;
+                    color: #5e5e5e;
+                    cursor: pointer;
+
+                    &.selected {
+                        background-color: $point-color;
+                        color: #fff;
+                    }
+                    
+                }
+            }
+        }
+
+        &_placeInfo {
+            padding: 0;
+            border: none;
+
+            legend {
+                margin-bottom: 1rem;
+            }
+            
+            label {
+                display: block;
+                margin: 1rem 0;
+            }
+
+
+            input {
+                display: block;
+                width: calc(100% - 2.2rem);
+                padding: 1.2rem 1rem;
+                font-size: 1.8rem;
+                border: 0.1rem solid #c4c4c4;
+                margin: 1rem 0 2rem;
+
+                &::placeholder {
+                    color: #c4c4c4;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            input[type=file] {
+                display: none;
+            }
+
+            label[for=img_file] {
+                background-color: $point-color;
+                padding: 1.2rem 0;
+                text-align: center;
+                color: #fff;
+                margin: 0;
+                cursor: pointer;
+                font-size: 1.8rem;
+                font-weight: 700;
+            }
+
+            .grid {
+
+                grid-template-columns: 5fr 1fr;
+                grid-gap: 1rem;
+
+                input {
+                    margin: 0;
+                }
+
+                button {
+                    color: #fff;
+                    background-color: $point-color;
+                    border: none;
+                    font-weight: 700;
+                    font-size: 1.8rem;
+
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+
+            .tag_list, .caution_list, .img_list {
+                margin: 1rem 0;
+                width: calc(100% - 2.6rem);
+                min-height: 3.3rem;
+                padding: 1.2rem;
+                background-color: #fff;
+                border: 0.1rem solid #c4c4c4 ;
+                
+                li {
+                    position: relative;
+                    font-size: 1.6rem;
+                    color: #5d5d5d;
+                    display: inline-block;
+                    margin: 0.5rem 1rem;
+    
+                    &:before {
+                        content: "#";
+                        display: inline;
+                    }
+
+                    button {
+                        background-color: transparent;
+                        border: none;
+                        display: inline-block;
+                        color: $point-color;
+                        margin-left: 1rem;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .img_list {
+
+                
+
+                li {
+                    display: grid;
+                    grid-template-columns: 1fr 15fr 1fr;
+                    grid-gap: 0.5rem;
+
+                   &::before {
+                       display: none;
+                   }
+
+                   input[type=radio] {
+                       width: 80%;
+                       height: 80%;
+                       margin: auto;
+                   }
+
+                }
+            }
+        }
+    }
+
+    button[type=submit] {
+        display: block;
+        width: 17.8rem;
+        margin: 5rem auto 10rem;
+        padding: 1.2rem 0;
+        background-color: #626262;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+}
