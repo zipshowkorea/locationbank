@@ -10,8 +10,11 @@ $(document).ready(function(){
 function tagAdd() {
     var tag = document.getElementById('place_tag').value;
     var tagList = $('.tag_list');
-    tagList.append('<li>' + tag + '<button type="button" id="del">X</button></li>');
-    document.getElementById("place_tag").value = null;
+
+    if(tag  != ""){
+        tagList.append('<li>' + tag + '<button type="button" id="del">X</button></li>');
+        document.getElementById("place_tag").value = null;
+    }
 
     tagList.on('click', "#del", function(){
         $(this).parent().remove();
