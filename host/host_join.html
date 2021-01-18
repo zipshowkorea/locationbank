@@ -30,7 +30,8 @@
             <fieldset class="host_basic">
                 <legend>호스트 정보</legend>
                 <label for="host_email" class="essential">이메일</label>
-                <input type="email" id="host_email" placeholder="example@email.com">
+                <input type="email" id="host_email" placeholder="example@email.com" onchange="checkEmail();">
+                <div class="emailRegExp"></div>
                 <label for="host_name" class="essential">이름</label>
                 <input type="text" id="host_name" placeholder="실제 공간 관리자">
                 <label for="host_phone" class="essential">연락처</label>
