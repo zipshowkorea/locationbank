@@ -47,7 +47,7 @@ function tagAdd() {
     var tagList = $('.tag_list');
 
     if(tag  != ""){
-        tagList.append('<li>' + tag + '<button type="button" id="del">X</button></li>');
+        tagList.append('<li>' + tag + '<input type="text" name="tag[]" value="' + tag + '" style="display:none"><button type="button" id="del">X</button></li>');
         document.getElementById("place_tag").value = null;
     } else {
         $('#place_tag').css({'border':'0.1rem solid red'}).focus();;
