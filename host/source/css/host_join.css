@@ -87,6 +87,10 @@ li {
   font-size: 1.8rem;
 }
 
+.wrap .host_info fieldset input.invalid {
+  border-color: #ff1f00;
+}
+
 .wrap .host_info fieldset input::-webkit-input-placeholder {
   color: #c4c4c4;
 }

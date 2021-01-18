@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
     $('input').attr('disabled',true);
     $('button').css('cursor','default');
@@ -8,6 +9,7 @@ $(document).ready(function(){
     var offsetRight = $('#host_email').offset().left + $('#host_email').width();
     $('.modify').css({top:offsetTop,left:offsetRight+50});
 });
+
 
 function Modify() {
     $('input').attr('disabled',false);

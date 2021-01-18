@@ -7,7 +7,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <link rel="stylesheet" href="source/css/common.css">
-    <link rel="stylesheet" href="source/css/create_place.css">
+    <link rel="stylesheet" href="source/css/host_reservation.css">
 
     <!-- JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -29,74 +29,104 @@
             </div>
         </div>
     </header>
-    <main class="create_place">
-        <form action="" method="POST" class="place_info">
-            <fieldset class="create_category">
-                <legend>공간 유형 설정</legend>
-                <div class="grid">
-                    <input type="radio" name="place_category" id="category1" value="">
-                    <label for="category1">카테고리1</label>
-                    <input type="radio" name="place_category" id="category2" value="">
-                    <label for="category2">카테고리2</label>
-                    <input type="radio" name="place_category" id="category3" value="">
-                    <label for="category3">카테고리3</label>
-                    <input type="radio" name="place_category" id="category4" value="">
-                    <label for="category4">카테고리4</label>
-                    <input type="radio" name="place_category" id="category5" value="">
-                    <label for="category5">카테고리5</label>
-                    <input type="radio" name="place_category" id="category6" value="">
-                    <label for="category6">카테고리6</label>
-                    <input type="radio" name="place_category" id="category7" value="">
-                    <label for="category7">카테고리7</label>
-                    <input type="radio" name="place_category" id="category8" value="">
-                    <label for="category8">카테고리8</label>
-                    <input type="radio" name="place_category" id="category9" value="">
-                    <label for="category9">카테고리9</label>
-                </div>
-            </fieldset>
-            <fieldset class="create_placeInfo">
-                <legend>공간 정보</legend>
-                <label for="place_name" class="essential">공간 대표 이름</label>
-                <p class="caution1">- <strong>잘된 예) </strong>로컬 오피스 - <strong>잘못된 예) </strong>로컬오피스 101호</p>
-                <input type="text" id="place_name" placeholder="공간의 이름을 입력하세요">
-                <label for="place_tag" class="essential">공간 태그</label>
-                <p class="caution1">- 태그는 최대 5개까지 가능합니다.</p>
-                <div class="grid">
-                    <input type="text" id="place_tag" placeholder="태그를 입력하세요">
-                    <button type="button" onclick="tagAdd()">추가</button>
-                </div>
-                <ul class="tag_list">
-                </ul>
-                <label for="place_intro" class="essential">공간 소개</label>
-                <input type="text" id="place_intro" placeholder="공간을 상세하게 소개해보세요">
-                <label for="place_addr" class="essential">공간 주소</label>
-                <div class="grid">
-                    <input type="text" id="place_addr1" placeholder="업체 주소">
-                    <button type="button">주소찾기</button>
-                </div>
-                <input type="text" id="place_addr2" placeholder="나머지 주소 입력">
-                <label for="place_caution" class="essential">예약시 주의사항</label>
-                <input type="text" id="place_caution" placeholder="최대 1,000자 내로 작성해 주세요.">
-                <label for="place_vr_path" class="essential">VR360 URL</label>
-                <input type="text" id="place_vr_path" placeholder="URL 입력">
-                <label for="place_drone_path" class="essential">드론360 URL</label>
-                <input type="text" id="place_drone_path" placeholder="URL 입력">
-                <label for="place_img_path" class="essential">대표 이미지</label>
-                <p class="caution1">- 최대 10개 / 5MB 이하 / 사이즈 2048*1158 제한</p>
-                <div class="grid">
-                    <ul class="img_list">
-                    </ul>
-                    <label for="img_file">업로드</label>
-                    <input multiple="multiple" type="file" accept="image/*" id="img_file" onchange="multipleUpload()">
-                </div>
-                <p>- <span class="caution2"><strong>체크하신 부분이 썸네일 이미지</strong></span>로 사용됩니다.</p><br>
-                <p>- <span class="caution1"><strong>사진과 드론뷰</strong></span> 촬영이 필요시 <span class="caution1"><strong>요청</strong></span>해주세요.</p>
-            </fieldset>
-        </form>
-        <div class="container">
-            <button type="submit" id= "infoDel" onclick="placeDel();">삭제</button>
-            <button type="submit">저장</button>
-        </div>
+    <main class="host_reservation">
+        <h2>예약관리</h2>
+        <ul class="reservation_list grid">
+            <li>
+                <p class="title">갤럭시아파트 - 101호</p>
+                <span class="cancel">
+                    예약취소
+                </span>
+                <table>
+                    <tr>
+                        <td>날짜</td>
+                        <td class="reserv_date1">2021.01.20 - 2021.01.22</td>
+                    </tr>
+                    <tr>
+                        <td>시간</td>
+                        <td class="reserv_date2">오전 09:00 - 오후 09:00</td>
+                    </tr>
+                    <tr>
+                        <td>연락처</td>
+                        <td>
+                            <span class="reserv_user">홍상용</span>
+                            <span class="reserv_user_phone">010.2803.1226</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>사용목적</td>
+                        <td class="reserv_purpose">잠깐 빌리겠습니다.</td>
+                    </tr>
+                    <tr>
+                        <td>요청사항</td>
+                        <td class="reserv_requests">난방 부탁드립니다.</td>
+                    </tr>
+                </table>
+            </li>
+            <li>
+                <p class="title">애플아파트 - 103호</p>
+                <span class="cancel">
+                    예약취소
+                </span>
+                <table>
+                    <tr>
+                        <td>날짜</td>
+                        <td class="reserv_date1">2021.01.20 - 2021.01.22</td>
+                    </tr>
+                    <tr>
+                        <td>시간</td>
+                        <td class="reserv_date2">오전 09:00 - 오후 09:00</td>
+                    </tr>
+                    <tr>
+                        <td>연락처</td>
+                        <td>
+                            <span class="reserv_user">홍상용</span>
+                            <span class="reserv_user_phone">010.2803.1226</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>사용목적</td>
+                        <td class="reserv_purpose">잠깐 빌리겠습니다.</td>
+                    </tr>
+                    <tr>
+                        <td>요청사항</td>
+                        <td class="reserv_requests">난방 부탁드립니다.</td>
+                    </tr>
+                </table>
+            </li>
+            <li>
+                <p class="title">집쇼아파트 - 102호</p>
+                <span class="cancel">
+                    예약취소
+                </span>
+                <table>
+                    <tr>
+                        <td>날짜</td>
+                        <td class="reserv_date1">2021.01.20 - 2021.01.22</td>
+                    </tr>
+                    <tr>
+                        <td>시간</td>
+                        <td class="reserv_date2">오전 09:00 - 오후 09:00</td>
+                    </tr>
+                    <tr>
+                        <td>연락처</td>
+                        <td>
+                            <span class="reserv_user">홍상용</span>
+                            <span class="reserv_user_phone">010.2803.1226</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>사용목적</td>
+                        <td class="reserv_purpose">잠깐 빌리겠습니다.</td>
+                    </tr>
+                    <tr>
+                        <td>요청사항</td>
+                        <td class="reserv_requests">난방 부탁드립니다.</td>
+                    </tr>
+                </table>
+            </li>
+        </ul>
+        
     </main>
     <footer>
         <ul class="inner">

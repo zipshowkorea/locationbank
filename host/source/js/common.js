@@ -20,4 +20,5 @@ $(document).ready(function(){
             $('.category ul').append('<li style="width:calc(20% * ' + num + ' - 0.1rem); height:4.3rem; position:absolute; bottom:0; right:0"></li>');
         }
     }
+    
 });

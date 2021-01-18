@@ -320,9 +320,8 @@ main .set_price label.essential:after {
 main .set_price p {
   display: block;
   font-size: 1.8rem;
-  display: inline;
   color: #5d5d5d;
-  margin: 1rem 0;
+  margin: 1.6rem 0;
 }
 
 main .set_price p input {
