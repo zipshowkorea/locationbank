@@ -13,6 +13,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="source/js/form-submission-handler.js"></script>
     <script src="source/js/common.js"></script>
+    <script src="source/js/regexp.js"></script>
+
     <title>Location Bank</title>
 </head>
 <body>
@@ -33,13 +35,15 @@
                 <input type="text" id="host_name" placeholder="실제 공간 관리자">
                 <label for="host_phone" class="essential">연락처</label>
                 <div class="grid">
-                    <input type="text" id="host_phone" placeholder="-없이 입력해주세요">
+                    <input type="text" id="host_phone" placeholder="-없이 입력해주세요" onkeypress="return checkNum(event);">
                     <button type="button">인증하기</button>
                 </div>
                 <label for="host_password">비밀번호</label>
-                <input type="password" id="host_password">
+                <input type="password" id="host_password" onchange="checkPw();">
+                <p class="pwRegExp"></p>
                 <label for="host_password2">비밀번호 확인</label>
-                <input type="password" id="host_password2">
+                <input type="password" id="host_password2" onchange="checkPw();">
+                <p class="pwConfirm"></p>
             </fieldset>
             <fieldset class="host_company">
                 <legend>호스트 정보</legend>
@@ -53,7 +57,7 @@
                 <label for="host_business_sector" class="essential">업종</label>
                 <input type="text" id="host_business_sector" placeholder="사업자 등록증상 업종">
                 <label for="host_business_number" class="essential">사업자 등록 번호</label>
-                <input type="text" id="host_business_number" placeholder="사업자 등록증상 사업자 번호">
+                <input type="text" id="host_business_number" placeholder="사업자 등록증상 사업자 번호" onkeypress="return checkNum(event);">
                 <label for="host_company_address" class="essential">사업자 등록증상 주소</label>
                 <div class="grid">
                     <input type="text" id="host_company_address1" placeholder="사업자 등록증상 업체 주소">
