@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 10px;
+  overflow-x: hidden;
+  background-color: #f0f0f0;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+.wrap {
+  width: 970px;
+  margin: 0 auto;
+  position: relative;
+}
+
+html {
+  background-color: #fff;
+}
+
+.gnb {
+  display: none;
+}
+
+.host_index {
+  width: 32rem;
+  margin: 15.5rem auto;
+  position: relative;
+}
+
+.host_index .host_login fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.host_index .host_login fieldset legend {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 3.2rem;
+}
+
+.host_index .host_login fieldset p {
+  font-size: 1.8rem;
+  color: #656565;
+  line-height: 3.2rem;
+}
+
+.host_index .host_login fieldset input {
+  width: calc(100% - 2.2rem);
+  margin: 0.5rem 0;
+  padding: 1rem;
+  font-size: 1.8rem;
+}
+
+.host_index .host_login fieldset input:focus {
+  outline: none;
+}
+
+.host_index .host_login fieldset input::-webkit-input-placeholder {
+  color: #9e9e9e;
+}
+
+.host_index .host_login fieldset input:-ms-input-placeholder {
+  color: #9e9e9e;
+}
+
+.host_index .host_login fieldset input::-ms-input-placeholder {
+  color: #9e9e9e;
+}
+
+.host_index .host_login fieldset input::placeholder {
+  color: #9e9e9e;
+}
+
+.host_index .login {
+  width: 100%;
+  padding: 1.2rem 0;
+  font-size: 1.8rem;
+  background-color: #0078f0;
+  color: #fff;
+  border: none;
+  margin: 3rem 0 2rem;
+}
+
+.host_index .login:focus {
+  outline: none;
+}
+
+.host_index a {
+  font-size: 1.8rem;
+  color: #9e9e9e;
+}
+
+.host_index a:last-child {
+  position: absolute;
+  right: 0;
+}
+
+.host_index a:hover {
+  text-decoration: underline;
+}
