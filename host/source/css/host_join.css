@@ -77,6 +77,14 @@ li {
   color: #ff1f00;
 }
 
+.wrap .host_info fieldset .pwRegExp, .wrap .host_info fieldset .pwConfirm {
+  color: #ff1f00;
+}
+
+.wrap .host_info fieldset .pwConfirm {
+  margin-bottom: 1rem;
+}
+
 .wrap .host_info fieldset input {
   display: block;
   width: calc(100% - 2.2rem);
