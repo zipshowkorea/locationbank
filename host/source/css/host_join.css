@@ -77,7 +77,7 @@ li {
   color: #ff1f00;
 }
 
-.wrap .host_info fieldset .pwRegExp, .wrap .host_info fieldset .pwConfirm {
+.wrap .host_info fieldset .pwRegExp, .wrap .host_info fieldset .pwConfirm, .wrap .host_info fieldset .emailRegExp {
   color: #ff1f00;
 }
 
