@@ -86,8 +86,10 @@
                 <div class="grid">
                     <ul class="img_list">
                     </ul>
-                    <label for="img_file">업로드</label>
-                    <input multiple="multiple" type="file" accept="image/*" id="img_file" onchange="multipleUpload()">
+                    <ul class="input_list" style="display:none;">
+                        <li><input type="file" accept="image/*" id="img_file1" onchange="addImg();"></li>
+                    </ul>
+                    <label for="img_file1" class="img_file">업로드</label>
                 </div>
                 <p>- <span class="caution2"><strong>체크하신 부분이 썸네일 이미지</strong></span>로 사용됩니다.</p><br>
                 <p>- <span class="caution1"><strong>사진과 드론뷰</strong></span> 촬영이 필요시 <span class="caution1"><strong>요청</strong></span>해주세요.</p>
