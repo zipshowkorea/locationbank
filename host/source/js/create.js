@@ -59,10 +59,13 @@ function tagAdd() {
 }
 
 
-function multipleUpload() {
-    var file = document.getElementById('img_file');
+function addImg() {
+    var file = document.getElementById('img_file1');
     var fileList = ""
     var imgList = $('.img_list');
+    var index = imgList.children().length+1;
+    var inputList = $(".input_list");
+    console.log(index);
 
     if('files' in file) {
        
@@ -77,15 +80,18 @@ function multipleUpload() {
                 $('.img_list').append(
                     fileList = '<li><input type="radio" name="Thumb" id="' + $('.img_list li').length + '"><label for ="' + $('.img_list li').length + '">' + img.name+ '</label><button type="button" id="del">X</button></li>'
                 );
-                
-                imgList.on('click', "#del", function(){
-                    $(this).parent().remove();
-    
-                });
-            }
-
-            
+                inputList.append('<li><input type="file" accept="image/*" id="img_file' + index + '" onchage="addImg();">');
+                $('.img_file').attr('for','img_file' + index);
+            }    
         }
+
+        imgList.on('click', "#del", function(){
+            $(this).parent().remove();
+            $('.input_list').find('#img_id' + index).remove();
+            
+            
+        });
+        console.log(file.files)
         
     }
 }
