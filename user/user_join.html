@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="source/css/common.css">
+    <link rel="stylesheet" href="source/css/user_join.css">
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="source/js/form-submission-handler.js"></script>
+    <script src="source/js/common.js"></script>
+    <script src="source/js/user_join.js"></script>
+    <script src="source/js/regexp.js"></script>
+
+    <title>Location Bank</title>
+</head>
+<body>
+    <header>
+        <div class="wrap">
+            <div class="container">
+                <h1><a href="index.html">Location Bank</a></h1>
+                <input type="search" name="search" id="header_search">
+                <button type="submit" class="xi-search"></button>
+                <div class="ham">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="menu">
+            <div>
+                <button class="xi-close"></button>
+                <div class="welcome">
+                    <div class="div"></div>
+                    <h2>로케이션뱅크에 오신걸 환영합니다 :)</h2>
+                    <p>로그인을 해주세요</p>
+                    <a href="login.html">로그인 하기</a>
+                </div>
+                <hr>
+                <ul class="gnb">
+                    <li><a href="reservation.html">예약 현황</a></li>
+                    <li><a href="paid_3D.html">구매 모델링</a></li>
+                    <li><a href="https://zipshowkorea.com/about.html">회사 정보</a></li>
+                    <li><a href="ask.html">문의하기</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main class="user_join">
+        <form action="" method="POST" class="user_info" id="userJoin">
+            <fieldset>
+                <legend>회원가입</legend>
+                <p>정보를 정확히 입력해주세요</p>
+                <input type="text" id="user_name" placeholder="닉네임">
+                <input type="email" id="user_email" placeholder="example@email.com" onchange="checkEmail();">
+                <div class="emailRegExp"></div>
+                <input type="password" id="user_password" placeholder="비밀번호" onchange="checkPw();">
+                <p class="pwRegExp"></p>
+                <input type="password" id="user_password2" placeholder="비밀번호 확인" onchange="checkPw();">
+                <p class="pwConfirm"></p>
+                <input type="checkbox" id="allCheck">
+                <label for="allCheck">아래 약관에 모두 동의합니다.</label>
+                <input type="checkbox"  id="join1" class="essential normal">
+                <label for="join1" class="essential">서비스 이용약관(필수)</label>
+                <input type="checkbox"  id="join2" class="essential normal">
+                <label for="join2" class="essential">개인정보 처리 방침(필수)</label>
+                <input type="checkbox"  id="join3" class="normal">
+                <label for="join3">이벤트 등 프로모션 알람 수신(선택)</label>
+            </fieldset>
+        </form>
+        <button type="button" form="userJoin" onclick="joinBtn();">회원가입하기</button>
+    </main>
+    <footer>
+        <ul class="inner">
+            <li class="foot-logo"></li>
+            <li class="foot-info">
+                <span>주식회사 집쇼코리아</span>
+                <span>본사 : 인천광역시 부평구 부평대로 293, 부평테크시티 908호</span>
+                <span>사업자번호 : 388-88-01168</span>
+                <span>대표 : 홍상용</span><br>
+                <span class="phone">070-5180-0011</span>
+                <span class="mail">zipshowkorea@gmail.com</span>
+            </li>
+        </ul>
+
+        <div class="divide"></div>
+
+        <ul class="inner">
+            <li class="foot-copy">ⓒ Copyright 2019 ZIPSHOWKOREA. All rights reserved.</li>
+        </ul>
+    </footer>
+</body>
+</html>
