@@ -10,7 +10,7 @@ function checkPw() {
     var pw = document.getElementById('host_password').value;
     var confirmPw = document.getElementById('host_password2').value;
 
-    if(pw.length < 5 || pw.length > 17) {
+    if(pw.length < 6 || pw.length > 17) {
         $('.pwRegExp').html('비밀번호는 6자 이상, 16자 이하만 이용 가능합니다.');
         $('#host_password').addClass('invalid')
         $('#host_password').focus();
