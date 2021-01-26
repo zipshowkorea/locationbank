@@ -89,13 +89,17 @@ $(document).ready(function() {
         dateFormat: 'yy-mm-dd',
         minDate: 'today',
         onClose: function (selectedDate) {
+            var today = new Date();
             var min = $(this).datepicker('getDate');
             if(min == null) {
                 $("#start-date").datepicker('option','minDate','today');
-            } else {
+            } else if(getFormatDate(min) == getFormatDate(today)) {
+                $("#start-date").datepicker('option','minDate', selectedDate);
+                $("#start-date").datepicker('option','maxDate', selectedDate );
+            }else {
                 min.setDate(min.getDate() - 1);
                 $("#start-date").datepicker('option','minDate', min);
-                $("#start-date").datepicker('option','maxDate', );
+                $("#start-date").datepicker('option','maxDate', selectedDate );
             }
         }
     });
