@@ -1,0 +1,56 @@
+@import 'config';
+
+.result_reservation {
+    width: 32rem;
+    margin: 5rem auto 10rem;
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+
+    .result, .reserv_place {
+        font-weight: 700;
+    }
+
+    p:nth-child(2) {
+        color: #656565;
+    }
+
+    .title {
+        color: #848484;
+    }
+
+    pre {
+        white-space: pre-wrap;
+        margin: 0 1rem;
+    }
+
+    img {
+        width: 100%;
+        margin: 2rem 0;
+    }
+
+    button {
+        width: 100%;
+        padding: 1.2rem 0;
+        border: none;
+        font-weight: 700;
+        cursor: pointer;
+        &:focus {
+            outline: none;
+        }
+    }
+    
+    .confirm {
+        color: #fff;
+        background-color: $point-color;
+        margin: 4rem 0 1rem;
+    }
+    
+    .cancel {
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+        background-color: transparent;
+        color: #aaa;
+    }
+
+}

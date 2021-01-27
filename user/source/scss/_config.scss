@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+$font : 'Roboto', sans-serif;
+$point-color : #0078f0;
+
+@mixin transition-ease {
+    transition: all 1s ease-in;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: $font;
+}
+
+html {
+    font-size: 10px;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.wrap {
+    width: 970px;
+    margin: 0 auto;
+    position: relative;
+}
