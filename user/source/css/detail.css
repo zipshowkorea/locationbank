@@ -46,6 +46,43 @@ li {
   margin: 3rem 0 1rem;
 }
 
+.detail_place .vr {
+  width: 100%;
+  height: 45rem;
+  position: relative;
+}
+
+.detail_place .vr .cover {
+  width: inherit;
+  height: inherit;
+  background-image: url("https://my.matterport.com/api/v2/player/models/wyZJ8NMK5ed/thumb/");
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.detail_place .vr .cover .playBtn {
+  width: 30rem;
+  height: 10rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  cursor: pointer;
+  color: #fff;
+  font-size: 8rem;
+  text-align: center;
+}
+
+.detail_place .vr iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
 .detail_place .place_intro {
   width: 58rem;
   margin-right: 2rem;
@@ -255,6 +292,7 @@ li {
   margin: 0.8rem;
   margin-left: 0;
   cursor: pointer;
+  color: #0078f0;
 }
 
 .detail_place .place_pay .user_reservation .reserv_select .date {
@@ -289,6 +327,10 @@ li {
 }
 
 .detail_place .place_pay .user_reservation .user_selectInfo .container label {
+  display: inline-block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   color: #656565;
 }
 
@@ -300,6 +342,20 @@ li {
 
 .detail_place .place_pay .user_reservation .user_selectInfo .container input:disabled {
   background-color: transparent;
+}
+
+.detail_place .place_pay .user_reservation .user_selectInfo .container .setDate {
+  text-align: right;
+}
+
+.detail_place .place_pay .user_reservation .user_selectInfo .container .setDate span {
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  margin-left: 0.5rem;
+}
+
+.detail_place .place_pay .user_reservation .user_selectInfo .container .setDate span:not(.period) {
+  display: none;
 }
 
 .detail_place .place_pay .user_reservation .userInfo {

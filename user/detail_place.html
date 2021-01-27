@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="source/css/common.css">
     <link rel="stylesheet" href="source/css/detail.css">
@@ -60,7 +60,14 @@
     <main class="detail_place">
         <section id="contents" class="wrap">
             <h2 class="title">공세리성당</h2>
-            <iframe src="https://zipshowkorea.com/d2/wyZJ8NMK5ed.html" frameborder="0" width="100%" height="100%" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" style="height: 450px;"></iframe>
+            <div class="vr">
+                <div class="cover">
+                    <div class="playBtn">
+                        <i class="xi-play-circle-o"></i>
+                    </div>
+                </div>
+                <iframe src="https://mpembed.com/show/?m=wyZJ8NMK5ed&mpu=668" frameborder="0" width="100%" height="100%" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+            </div>
             <div class="place_info container">
                 <div class="place_intro">
                     <div class="topMenu">
@@ -184,7 +191,13 @@
                                 <legend>비용안내</legend>
                                 <div class="container">
                                     <label for="select_date">날짜/시간</label>
-                                    <input type="text" id="select_date" disabled>
+                                    <div class="setDate">
+                                        <span id="setStartDate"></span>
+                                        <span id="setStartTime"></span>
+                                        <span class="period">~</span><br>
+                                        <span id="setEndDate"></span>
+                                        <span id="setEndTime"></span>
+                                    </div>
                                 </div>
                                 <div class="container">
                                     <label for="cost" class="cost">가격</label>
