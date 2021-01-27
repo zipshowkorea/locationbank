@@ -442,6 +442,10 @@ footer .divide {
   line-height: 3.5rem;
 }
 
+.modelling .swiper-container {
+  z-index: -1;
+}
+
 .modelling_list {
   margin: 1rem 0;
 }
@@ -493,10 +497,12 @@ footer .divide {
 
 .modelling .swiper-button-prev {
   left: -5rem;
+  z-index: 0;
 }
 
 .modelling .swiper-button-next {
   right: -5rem;
+  z-index: 0;
 }
 
 .popup {
