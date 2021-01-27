@@ -76,7 +76,7 @@ li {
   outline: none;
 }
 
-.result_reservation .confirm {
+.result_reservation .confirm, .result_reservation .download {
   color: #fff;
   background-color: #0078f0;
   margin: 4rem 0 1rem;
