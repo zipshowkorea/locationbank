@@ -15,7 +15,7 @@ $(document).ready(function() {
         var scroll_top = $('.place_intro > div').eq(idx + 1).offset().top - 235;
         $(this).siblings('li').removeClass('on');
         $(this).addClass('on');
-        $('html, body').stop().animate({scrollTop:scroll_top},3000);
+        $('html, body').stop().animate({scrollTop:scroll_top},5000);
     });
 
     // 스크롤 시 이벤트
@@ -90,6 +90,8 @@ $(document).ready(function() {
                 endDate.datepicker('option', 'minDate', 'today' );
             } else if(getFormatDate($(this).datepicker('getDate')) == getFormatDate(new Date())) {
                 startTime.timepicker('option','minTime',new Date())
+                max.setDate(max.getDate() + 1);
+                endDate.datepicker('option', 'maxDate', max);
             }else {
                 endDate.datepicker('option', 'minDate', selectedDate );
                 max.setDate(max.getDate() + 1);
@@ -123,6 +125,7 @@ $(document).ready(function() {
                 startDate.datepicker('option','minDate', selectedDate);
                 startDate.datepicker('option','maxDate', selectedDate );
                 endTime.timepicker('option','minTime',startTime.val());
+                
             } else if(getFormatDate(min) == getFormatDate(startDate.datepicker('getDate'))) {
                 endTime.timepicker('option','minTime',startTime.val());
             } else {
