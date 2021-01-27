@@ -457,11 +457,63 @@ li {
   border-top: none;
   border-bottom: none;
   padding: 0 2.5rem;
-}
-
-.detail_3d .model_pay h3 {
   font-size: 1.8rem;
   line-height: 3.2rem;
+}
+
+.detail_3d .model_pay .price {
+  color: #656565;
+}
+
+.detail_3d .model_pay .container {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.detail_3d .model_pay input {
+  display: inline-block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: 700;
+  color: #0078f0;
+  background-color: transparent;
+  border: none;
+  text-align: right;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+}
+
+.detail_3d .model_pay table {
+  margin: 0;
+  width: 100%;
+}
+
+.detail_3d .model_pay th {
+  text-align: left;
+  color: #656565;
+  font-weight: 400;
+}
+
+.detail_3d .model_pay td {
+  text-align: right;
+}
+
+.detail_3d .model_pay button {
+  width: 100%;
+  padding: 1.2rem;
+  color: #fff;
+  background-color: #0078f0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  margin: 3rem 0 0;
+}
+
+.detail_3d .model_pay button:focus {
+  outline: none;
 }
 
 .modal {
