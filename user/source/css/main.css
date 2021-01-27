@@ -443,7 +443,7 @@ footer .divide {
 }
 
 .modelling .swiper-container {
-  z-index: -1;
+  z-index: 0;
 }
 
 .modelling_list {
