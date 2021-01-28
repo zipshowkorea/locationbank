@@ -80,6 +80,7 @@ li {
   color: #0078f0;
   font-size: 1.4rem;
   line-height: 3.2rem;
+  cursor: pointer;
 }
 
 .user_reservation .reservation_list li table {
