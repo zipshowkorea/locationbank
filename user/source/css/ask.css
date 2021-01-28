@@ -74,7 +74,7 @@ li {
   font-weight: 700;
   background-color: #0078f0;
   border: none;
-  cursor: none;
+  cursor: pointer;
 }
 
 .ask .emailRegExp {
