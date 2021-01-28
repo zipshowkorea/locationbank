@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+.wrap {
+  width: 970px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.paid_3D {
+  width: 57rem;
+  margin: 5rem auto 10rem;
+}
+
+.paid_3D h2 {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  font-weight: 700;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 2rem;
+  margin: 0 auto;
+  border-bottom: 0.5rem solid #000;
+}
+
+.paid_3D .reservation_list {
+  width: 100%;
+}
+
+.paid_3D .reservation_list li {
+  background-color: #fff;
+  border: 0.1rem solid #c4c4c4;
+  padding: 2rem;
+  position: relative;
+  margin: 2rem 0;
+}
+
+.paid_3D .reservation_list li .container {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.paid_3D .reservation_list li img {
+  width: 100%;
+}
+
+.paid_3D .reservation_list li .title {
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  font-weight: 700;
+}
+
+.paid_3D .reservation_list li .title span {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #656565;
+  margin-left: 1rem;
+}
+
+.paid_3D .reservation_list li .button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.paid_3D .reservation_list li .obj_download, .paid_3D .reservation_list li .texture_download {
+  display: block;
+  border: none;
+  background-color: transparent;
+  color: #0078f0;
+  font-size: 1.4rem;
+  line-height: 3.2rem;
+  width: 12rem;
+  text-align: right;
+  cursor: pointer;
+}
+
+.paid_3D .reservation_list li .obj_download:hover, .paid_3D .reservation_list li .texture_download:hover {
+  text-decoration: underline;
+}
