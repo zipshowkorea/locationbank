@@ -35,12 +35,12 @@ li {
   position: relative;
 }
 
-.paid_3D {
+.paid_3d {
   width: 57rem;
   margin: 5rem auto 10rem;
 }
 
-.paid_3D h2 {
+.paid_3d h2 {
   font-size: 2.4rem;
   line-height: 3.2rem;
   font-weight: 700;
@@ -53,11 +53,11 @@ li {
   border-bottom: 0.5rem solid #000;
 }
 
-.paid_3D .reservation_list {
+.paid_3d .reservation_list {
   width: 100%;
 }
 
-.paid_3D .reservation_list li {
+.paid_3d .reservation_list li {
   background-color: #fff;
   border: 0.1rem solid #c4c4c4;
   padding: 2rem;
@@ -65,36 +65,36 @@ li {
   margin: 2rem 0;
 }
 
-.paid_3D .reservation_list li .container {
+.paid_3d .reservation_list li .container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-.paid_3D .reservation_list li img {
+.paid_3d .reservation_list li img {
   width: 100%;
 }
 
-.paid_3D .reservation_list li .title {
+.paid_3d .reservation_list li .title {
   font-size: 1.8rem;
   line-height: 3.2rem;
   font-weight: 700;
 }
 
-.paid_3D .reservation_list li .title span {
+.paid_3d .reservation_list li .title span {
   font-size: 1.2rem;
   font-weight: 400;
   color: #656565;
   margin-left: 1rem;
 }
 
-.paid_3D .reservation_list li .button {
+.paid_3d .reservation_list li .button {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.paid_3D .reservation_list li .obj_download, .paid_3D .reservation_list li .texture_download {
+.paid_3d .reservation_list li .obj_download, .paid_3d .reservation_list li .texture_download {
   display: block;
   border: none;
   background-color: transparent;
@@ -106,6 +106,6 @@ li {
   cursor: pointer;
 }
 
-.paid_3D .reservation_list li .obj_download:hover, .paid_3D .reservation_list li .texture_download:hover {
+.paid_3d .reservation_list li .obj_download:hover, .paid_3d .reservation_list li .texture_download:hover {
   text-decoration: underline;
 }
