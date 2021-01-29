@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -18,6 +19,15 @@ li {
   list-style: none;
 }
 
+button, input {
+  border: none;
+  cursor: pointer;
+}
+
+button:focus, input:focus {
+  outline: none;
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -30,9 +40,88 @@ li {
 }
 
 .wrap {
-  width: 970px;
   margin: 0 auto;
   position: relative;
+}
+
+@media (min-width: 335px) {
+  .wrap {
+    width: 100%;
+  }
+}
+
+@media (min-width: 758px) {
+  .wrap {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrap {
+    width: 970px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button, input {
+  border: none;
+  cursor: pointer;
+}
+
+button:focus, input:focus {
+  outline: none;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+.wrap {
+  margin: 0 auto;
+  position: relative;
+}
+
+@media (min-width: 335px) {
+  .wrap {
+    width: 100%;
+  }
+}
+
+@media (min-width: 758px) {
+  .wrap {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrap {
+    width: 970px;
+  }
 }
 
 header {
@@ -54,6 +143,12 @@ header .wrap {
   height: 100%;
 }
 
+@media (min-width: 335px) {
+  header .wrap {
+    width: 100%;
+  }
+}
+
 header .container {
   width: 100%;
   position: absolute;
@@ -62,31 +157,54 @@ header .container {
           transform: translateY(-50%);
 }
 
-header .container h1 {
-  margin-right: 41.5rem;
+@media (min-width: 335px) {
+  header .container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 335px) {
+  header .container h1 {
+    margin-left: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  header .container h1 {
+    margin-right: 41.5rem;
+  }
 }
 
 header .container input[type=search] {
   width: 30rem;
   padding: 0 1rem;
-  border: none;
   border-bottom: 1px solid #737373;
   margin-right: 1.9rem;
 }
 
-header .container input[type=search]:focus {
-  outline: none;
+@media (min-width: 335px) {
+  header .container input[type=search] {
+    display: none;
+  }
 }
 
 header .container button {
   font-size: 2.5rem;
   background-color: transparent;
-  border: none;
-  margin-right: 3.9rem;
 }
 
-header .container button:focus {
-  outline: none;
+@media (min-width: 335px) {
+  header .container button {
+    margin-right: 5.8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  header .container button {
+    margin-right: 3.9rem;
+  }
 }
 
 header .container .ham {
@@ -130,13 +248,24 @@ header .container .ham span:after {
 }
 
 header .menu {
-  width: 36rem;
   height: 100%;
   position: absolute;
   z-index: 2;
   right: 0;
   top: 0;
   display: none;
+}
+
+@media (min-width: 335px) {
+  header .menu {
+    width: 100vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  header .menu {
+    width: 36rem;
+  }
 }
 
 header .menu.on {
@@ -184,6 +313,18 @@ header .menu .welcome {
   font-size: 1.8rem;
 }
 
+@media (min-width: 335px) {
+  header .menu .welcome {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1024px) {
+  header .menu .welcome {
+    width: 32rem;
+  }
+}
+
 header .menu .welcome h2 {
   font-family: "Roboto", sans-serif;
   font-size: 1.8rem;
@@ -209,9 +350,19 @@ header .menu .welcome a {
 }
 
 header .menu .gnb {
-  display: noe;
-  width: 32rem;
   margin: 0 auto;
+}
+
+@media (min-width: 335px) {
+  header .menu .gnb {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1024px) {
+  header .menu .gnb {
+    width: 32rem;
+  }
 }
 
 header .menu .gnb li {
@@ -283,30 +434,30 @@ footer .divide {
   border-top: 0.1rem solid #777;
 }
 
-.banner {
+.main .banner, .search .banner {
   width: 100%;
   height: 30rem;
   background-color: #d8f3ff;
 }
 
-.banner .content {
+.main .banner .content, .search .banner .content {
   padding: 8rem 20rem;
 }
 
-.banner .content p {
+.main .banner .content p, .search .banner .content p {
   font-size: 1.6rem;
   line-height: 1.9rem;
   margin-bottom: 1rem;
 }
 
-.banner .content h2 {
+.main .banner .content h2, .search .banner .content h2 {
   font-size: 2.4rem;
   line-height: 2.8rem;
   font-weight: 700;
   margin-bottom: 1.85rem;
 }
 
-.category {
+.main .category, .search .category {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -316,7 +467,7 @@ footer .divide {
   margin: 3rem auto;
 }
 
-.category ul {
+.main .category ul, .search .category ul {
   width: 53.6rem;
   -ms-grid-columns: (1fr)[5];
       grid-template-columns: repeat(5, 1fr);
@@ -326,7 +477,7 @@ footer .divide {
   position: relative;
 }
 
-.category ul li {
+.main .category ul li, .search .category ul li {
   width: 100%;
   height: calc(100% -0.1rem);
   height: 4.2rem;
@@ -336,7 +487,7 @@ footer .divide {
   background-color: #fff;
 }
 
-.category ul li a {
+.main .category ul li a, .search .category ul li a {
   width: 100%;
   position: absolute;
   top: 50%;
@@ -345,17 +496,22 @@ footer .divide {
           transform: translate(-50%, -50%);
 }
 
-.popular {
-  position: relative;
-  width: 100%;
+.main .search .more, .search .search .more {
+  display: none;
 }
 
-.popular h2 {
+.main .popular, .main .search, .search .popular, .search .search {
+  position: relative;
+  width: 100%;
+  padding-bottom: 10rem;
+}
+
+.main .popular h2, .main .search h2, .search .popular h2, .search .search h2 {
   font-size: 2.4rem;
   font-weight: 700;
 }
 
-.popular .more {
+.main .popular .more, .main .search .more, .search .popular .more, .search .search .more {
   position: absolute;
   right: 0;
   top: 0;
@@ -363,7 +519,22 @@ footer .divide {
   line-height: 3.5rem;
 }
 
-.popular_list {
+.main .popular .search_title, .main .search .search_title, .search .popular .search_title, .search .search .search_title {
+  text-align: center;
+  font-size: 2.4rem;
+  line-height: 4.2rem;
+  margin: 3rem 0 4rem;
+}
+
+.main .popular .search_title .keyword, .main .search .search_title .keyword, .search .popular .search_title .keyword, .search .search .search_title .keyword {
+  color: #0078f0;
+}
+
+.main .popular .swiper-container, .main .search .swiper-container, .search .popular .swiper-container, .search .search .swiper-container {
+  z-index: -1;
+}
+
+.main .popular_list, .main .search_list, .search .popular_list, .search .search_list {
   width: 100%;
   margin: 1rem 0;
   -ms-grid-columns: (1fr)[4];
@@ -371,36 +542,36 @@ footer .divide {
   grid-gap: 3rem 1rem;
 }
 
-.popular_list li {
+.main .popular_list li, .main .search_list li, .search .popular_list li, .search .search_list li {
   width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.popular_list li:hover .imgarea img {
+.main .popular_list li:hover .imgarea img, .main .search_list li:hover .imgarea img, .search .popular_list li:hover .imgarea img, .search .search_list li:hover .imgarea img {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-transition: all 1s ease-in;
   transition: all 1s ease-in;
 }
 
-.popular_list li a {
+.main .popular_list li a, .main .search_list li a, .search .popular_list li a, .search .search_list li a {
   display: block;
 }
 
-.popular_list li a .imgarea {
+.main .popular_list li a .imgarea, .main .search_list li a .imgarea, .search .popular_list li a .imgarea, .search .search_list li a .imgarea {
   width: 100%;
   overflow: hidden;
 }
 
-.popular_list li a .imgarea img {
+.main .popular_list li a .imgarea img, .main .search_list li a .imgarea img, .search .popular_list li a .imgarea img, .search .search_list li a .imgarea img {
   width: inherit;
   -webkit-transition: all 1s ease-in;
   transition: all 1s ease-in;
 }
 
-.popular_list li a .title {
+.main .popular_list li a .title, .main .search_list li a .title, .search .popular_list li a .title, .search .search_list li a .title {
   font-size: 1.8rem;
   font-weight: 700;
   line-height: 3.2rem;
@@ -408,14 +579,14 @@ footer .divide {
   text-overflow: ellipsis;
 }
 
-.popular_list li a .price {
+.main .popular_list li a .price, .main .search_list li a .price, .search .popular_list li a .price, .search .search_list li a .price {
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 2.5rem;
   color: #9c9c9c;
 }
 
-.popular_list li a .price span {
+.main .popular_list li a .price span, .main .search_list li a .price span, .search .popular_list li a .price span, .search .search_list li a .price span {
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 2.8rem;
@@ -423,18 +594,18 @@ footer .divide {
   margin-right: .4rem;
 }
 
-.modelling {
+.main .modelling, .search .modelling {
   position: relative;
   width: 100%;
   margin: 5rem 0 15rem;
 }
 
-.modelling h2 {
+.main .modelling h2, .search .modelling h2 {
   font-size: 2.4rem;
   font-weight: 700;
 }
 
-.modelling .more {
+.main .modelling .more, .search .modelling .more {
   position: absolute;
   right: 0;
   top: 0;
@@ -442,15 +613,15 @@ footer .divide {
   line-height: 3.5rem;
 }
 
-.modelling .swiper-container {
-  z-index: 0;
+.main .modelling .swiper-container, .search .modelling .swiper-container {
+  z-index: -1;
 }
 
-.modelling_list {
+.main .modelling_list, .search .modelling_list {
   margin: 1rem 0;
 }
 
-.modelling_list li {
+.main .modelling_list li, .search .modelling_list li {
   width: calc(25% - 5.2rem) !important;
   margin-right: 1rem;
   text-overflow: ellipsis;
@@ -459,20 +630,20 @@ footer .divide {
   padding: 2rem;
 }
 
-.modelling_list li a {
+.main .modelling_list li a, .search .modelling_list li a {
   display: block;
 }
 
-.modelling_list li a .imgarea {
+.main .modelling_list li a .imgarea, .search .modelling_list li a .imgarea {
   width: 100%;
   overflow: hidden;
 }
 
-.modelling_list li a .imgarea img {
+.main .modelling_list li a .imgarea img, .search .modelling_list li a .imgarea img {
   width: inherit;
 }
 
-.modelling_list li a .title {
+.main .modelling_list li a .title, .search .modelling_list li a .title {
   font-size: 1.8rem;
   font-weight: 700;
   line-height: 3.2rem;
@@ -480,14 +651,14 @@ footer .divide {
   text-overflow: ellipsis;
 }
 
-.modelling_list li a .price {
+.main .modelling_list li a .price, .search .modelling_list li a .price {
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 2.5rem;
   color: #9c9c9c;
 }
 
-.modelling_list li a .price span {
+.main .modelling_list li a .price span, .search .modelling_list li a .price span {
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 2.8rem;
@@ -495,17 +666,17 @@ footer .divide {
   margin-right: .4rem;
 }
 
-.modelling .swiper-button-prev {
+.main .modelling .swiper-button-prev, .search .modelling .swiper-button-prev {
   left: -5rem;
   z-index: 0;
 }
 
-.modelling .swiper-button-next {
+.main .modelling .swiper-button-next, .search .modelling .swiper-button-next {
   right: -5rem;
   z-index: 0;
 }
 
-.popup {
+.main .popup, .search .popup {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.4);
@@ -515,7 +686,7 @@ footer .divide {
   z-index: 3;
 }
 
-.popup .viewer {
+.main .popup .viewer, .search .popup .viewer {
   width: 90vw;
   height: 90vh;
   position: absolute;
@@ -529,12 +700,12 @@ footer .divide {
       grid-template-columns: 6fr 3fr;
 }
 
-.popup .viewer model-viewer {
+.main .popup .viewer model-viewer, .search .popup .viewer model-viewer {
   width: 100%;
   height: 100%;
 }
 
-.popup .viewer .model_info {
+.main .popup .viewer .model_info, .search .popup .viewer .model_info {
   width: 100%;
   height: 100%;
 }

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -18,6 +19,15 @@ li {
   list-style: none;
 }
 
+button, input {
+  border: none;
+  cursor: pointer;
+}
+
+button:focus, input:focus {
+  outline: none;
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -30,17 +40,88 @@ li {
 }
 
 .wrap {
-  width: 970px;
   margin: 0 auto;
   position: relative;
 }
 
-button {
+@media (min-width: 335px) {
+  .wrap {
+    width: 100%;
+  }
+}
+
+@media (min-width: 758px) {
+  .wrap {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrap {
+    width: 970px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button, input {
+  border: none;
   cursor: pointer;
 }
 
-button:focus {
+button:focus, input:focus {
   outline: none;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+.wrap {
+  margin: 0 auto;
+  position: relative;
+}
+
+@media (min-width: 335px) {
+  .wrap {
+    width: 100%;
+  }
+}
+
+@media (min-width: 758px) {
+  .wrap {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrap {
+    width: 970px;
+  }
 }
 
 header {
@@ -62,6 +143,12 @@ header .wrap {
   height: 100%;
 }
 
+@media (min-width: 335px) {
+  header .wrap {
+    width: 100%;
+  }
+}
+
 header .container {
   width: 100%;
   position: absolute;
@@ -70,31 +157,54 @@ header .container {
           transform: translateY(-50%);
 }
 
-header .container h1 {
-  margin-right: 41.5rem;
+@media (min-width: 335px) {
+  header .container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 335px) {
+  header .container h1 {
+    margin-left: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  header .container h1 {
+    margin-right: 41.5rem;
+  }
 }
 
 header .container input[type=search] {
   width: 30rem;
   padding: 0 1rem;
-  border: none;
   border-bottom: 1px solid #737373;
   margin-right: 1.9rem;
 }
 
-header .container input[type=search]:focus {
-  outline: none;
+@media (min-width: 335px) {
+  header .container input[type=search] {
+    display: none;
+  }
 }
 
 header .container button {
   font-size: 2.5rem;
   background-color: transparent;
-  border: none;
-  margin-right: 3.9rem;
 }
 
-header .container button:focus {
-  outline: none;
+@media (min-width: 335px) {
+  header .container button {
+    margin-right: 5.8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  header .container button {
+    margin-right: 3.9rem;
+  }
 }
 
 header .container .ham {
@@ -138,13 +248,24 @@ header .container .ham span:after {
 }
 
 header .menu {
-  width: 36rem;
   height: 100%;
   position: absolute;
   z-index: 2;
   right: 0;
   top: 0;
   display: none;
+}
+
+@media (min-width: 335px) {
+  header .menu {
+    width: 100vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  header .menu {
+    width: 36rem;
+  }
 }
 
 header .menu.on {
@@ -192,6 +313,18 @@ header .menu .welcome {
   font-size: 1.8rem;
 }
 
+@media (min-width: 335px) {
+  header .menu .welcome {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1024px) {
+  header .menu .welcome {
+    width: 32rem;
+  }
+}
+
 header .menu .welcome h2 {
   font-family: "Roboto", sans-serif;
   font-size: 1.8rem;
@@ -217,9 +350,19 @@ header .menu .welcome a {
 }
 
 header .menu .gnb {
-  display: noe;
-  width: 32rem;
   margin: 0 auto;
+}
+
+@media (min-width: 335px) {
+  header .menu .gnb {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1024px) {
+  header .menu .gnb {
+    width: 32rem;
+  }
 }
 
 header .menu .gnb li {
