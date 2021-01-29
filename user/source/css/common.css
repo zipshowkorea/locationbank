@@ -35,6 +35,14 @@ li {
   position: relative;
 }
 
+button {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
 header {
   width: 100%;
   height: 7rem;
