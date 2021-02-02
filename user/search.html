@@ -14,6 +14,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="source/js/common.js"></script>
     <script src="source/js/swiper.js"></script>
+    <script src="source/js/backpage.js"></script>
 
     <title>Location Bank</title>
 </head>
@@ -48,72 +49,70 @@
             </div>
         </div>
     </header>
-    <main class="search">
+    <main class="search_result">
         <div class="wrap">
             <section class="search">
                 <p class="search_title"><span class="keyword">"회장님댁"</span> 검색결과 입니다.</p>
                 <h2>검색공간</h2>
                 <span class="more"><a href="#more">더 보기</a></span>
-                <div class="swiper-container">
-                    <ul class="search_list swiper-wrapper">
-                        <li class="swiper-slide">
-                            <a href="detail_place.html">
-                                <div class="imgarea"><img src="https://my.matterport.com/api/v2/player/models/wyZJ8NMK5ed/thumb/" alt="공세리성당"></div>
-                                <p class="title">공세리성당</p>
-                                <p class="price"><span>150,000</span>원/패키지</p>                            
-                            </a>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="#detail">
-                                <div class="imgarea"><img src="https://my.matterport.com/api/v2/player/models/f9iGNnJ5Fr6/thumb/" alt="공세리성당"></div>
-                                <p class="title">충남도서관</p>
-                                <p class="price"><span>150,000</span>원/패키지</p>                            
-                            </a>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="#detail">
-                                <div class="imgarea"><img src="https://my.matterport.com/api/v2/player/models/3cVtiHyu8Pr/thumb/" alt="공세리성당"></div>
-                                <p class="title">창덕궁 : 희정당</p>
-                                <p class="price"><span>150,000</span>원/패키지</p>                            
-                            </a>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="#detail">
-                                <div class="imgarea"><img src="https://my.matterport.com/api/v2/player/models/HqBADQn2UVj/thumb/" alt="공세리성당"></div>
-                                <p class="title">슈가맨북스 - 부천점</p>
-                                <p class="price"><span>150,000</span>원/패키지</p>                            
-                            </a>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="#detail">
-                                <div class="imgarea"><img src="https://my.matterport.com/api/v2/player/models/1pWsTzSxh98/thumb/" alt="공세리성당"></div>
-                                <p class="title">파라다이스 스파 도고 카라반 캠핑장</p>
-                                <p class="price"><span>150,000</span>원/패키지</p>                            
-                            </a>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="#detail">
-                                <div class="imgarea"><img src="https://my.matterport.com/api/v2/player/models/FVqrnvAQc79/thumb/" alt="공세리성당"></div>
-                                <p class="title">4스터디카페</p>
-                                <p class="price"><span>150,000</span>원/패키지</p>                            
-                            </a>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="#detail">
-                                <div class="imgarea"><img src="https://my.matterport.com/api/v2/player/models/GL3BmCNGAZh/thumb/" alt="공세리성당"></div>
-                                <p class="title">잇다 스페이스</p>
-                                <p class="price"><span>150,000</span>원/패키지</p>                            
-                            </a>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="#detail">
-                                <div class="imgarea"><img src="https://my.matterport.com/api/v2/player/models/bPgf8rqwqMv/thumb/" alt="공세리성당"></div>
-                                <p class="title">세계꽃식물원 C동</p>
-                                <p class="price"><span>150,000</span>원/패키지</p>                            
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                <ul class="search_list">
+                    <li>
+                        <a href="detail_place.html">
+                            <div class="imgarea"><img src="https://my.matterport.com/api/v2/player/models/wyZJ8NMK5ed/thumb/" alt="공세리성당"></div>
+                            <p class="title">공세리성당</p>
+                            <p class="price"><span>150,000</span>원/패키지</p>                            
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#detail">
+                            <div class="imgarea"><img src="https://my.matterport.com/api/v2/player/models/f9iGNnJ5Fr6/thumb/" alt="공세리성당"></div>
+                            <p class="title">충남도서관</p>
+                            <p class="price"><span>150,000</span>원/패키지</p>                            
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#detail">
+                            <div class="imgarea"><img src="https://my.matterport.com/api/v2/player/models/3cVtiHyu8Pr/thumb/" alt="공세리성당"></div>
+                            <p class="title">창덕궁 : 희정당</p>
+                            <p class="price"><span>150,000</span>원/패키지</p>                            
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#detail">
+                            <div class="imgarea"><img src="https://my.matterport.com/api/v2/player/models/HqBADQn2UVj/thumb/" alt="공세리성당"></div>
+                            <p class="title">슈가맨북스 - 부천점</p>
+                            <p class="price"><span>150,000</span>원/패키지</p>                            
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#detail">
+                            <div class="imgarea"><img src="https://my.matterport.com/api/v2/player/models/1pWsTzSxh98/thumb/" alt="공세리성당"></div>
+                            <p class="title">파라다이스 스파 도고 카라반 캠핑장</p>
+                            <p class="price"><span>150,000</span>원/패키지</p>                            
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#detail">
+                            <div class="imgarea"><img src="https://my.matterport.com/api/v2/player/models/FVqrnvAQc79/thumb/" alt="공세리성당"></div>
+                            <p class="title">4스터디카페</p>
+                            <p class="price"><span>150,000</span>원/패키지</p>                            
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#detail">
+                            <div class="imgarea"><img src="https://my.matterport.com/api/v2/player/models/GL3BmCNGAZh/thumb/" alt="공세리성당"></div>
+                            <p class="title">잇다 스페이스</p>
+                            <p class="price"><span>150,000</span>원/패키지</p>                            
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#detail">
+                            <div class="imgarea"><img src="https://my.matterport.com/api/v2/player/models/bPgf8rqwqMv/thumb/" alt="공세리성당"></div>
+                            <p class="title">세계꽃식물원 C동</p>
+                            <p class="price"><span>150,000</span>원/패키지</p>                            
+                        </a>
+                    </li>
+                </ul>
             </section>
         </div>
     </main>

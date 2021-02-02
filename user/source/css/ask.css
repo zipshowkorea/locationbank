@@ -18,6 +18,18 @@ li {
   list-style: none;
 }
 
+button, input {
+  cursor: pointer;
+}
+
+button:focus, input:focus {
+  outline: none;
+}
+
+button {
+  border: none;
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -30,9 +42,26 @@ li {
 }
 
 .wrap {
-  width: 970px;
   margin: 0 auto;
   position: relative;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .wrap {
+    width: 32rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .wrap {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrap {
+    width: 970px;
+  }
 }
 
 .ask {
@@ -40,6 +69,12 @@ li {
   margin: 5rem auto 10rem;
   font-size: 1.8rem;
   line-height: 3.2rem;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .ask {
+    width: 90%;
+  }
 }
 
 .ask h2 {
@@ -72,9 +107,9 @@ li {
   padding: 1.2rem;
   color: #fff;
   font-weight: 700;
-  background-color: #0078f0;
+  background-color: #2955EF;
   border: none;
-  cursor: pointer;
+  cursor: none;
 }
 
 .ask .emailRegExp {

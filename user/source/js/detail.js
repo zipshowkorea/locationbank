@@ -146,11 +146,35 @@ $(document).ready(function() {
         }
     });
 
-    $('#openInfo').click(function () {
-        $(this).css({'display':'none'})
-        $('.userInfo').css({'display':'block'});
-        $('button[form=userReserv]').css({'display':'block'});
-    });
+    if($(window).width() >= 320 && $(window).width() < 1024) {
+        $('#openInfo').click(function() {
+            $('#callTohost').css({'display':'none'});
+            $('#openInfo').attr('id','openInfo2');
+            $('#openInfo2').css({'width':'100%'});
+            $('#openInfo2').html('다음');
+            $('.user_reservation').css({'display':'block'});
+            $('.place_intro').css({'display':'none'});
+            $('.buttonArea').addClass('noLine');
+            
+            $('#openInfo2').click(function() {
+                $(this).css({'display':'none'})
+                $('.userInfo').css({'display':'block'});
+                $('.reserv_select').css({'display':'none'});
+                $('.user_selectInfo').css({'display':'none'});
+                $('button[form=userReserv]').css({'display':'block','width':'100%'});
+            });
+        });
+
+
+
+    } else {
+        $('#openInfo').click(function () {
+            $(this).css({'display':'none'})
+            $('.userInfo').css({'display':'block'});
+            $('button[form=userReserv]').css({'display':'block'});
+        });
+    }
+
 
     
 });

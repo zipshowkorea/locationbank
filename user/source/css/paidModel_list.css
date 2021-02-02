@@ -18,6 +18,18 @@ li {
   list-style: none;
 }
 
+button, input {
+  cursor: pointer;
+}
+
+button:focus, input:focus {
+  outline: none;
+}
+
+button {
+  border: none;
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -30,14 +42,38 @@ li {
 }
 
 .wrap {
-  width: 970px;
   margin: 0 auto;
   position: relative;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .wrap {
+    width: 32rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .wrap {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrap {
+    width: 970px;
+  }
 }
 
 .paid_3d {
   width: 57rem;
   margin: 5rem auto 10rem;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .paid_3d {
+    width: 90%;
+    margin: 3rem auto 10rem;
+  }
 }
 
 .paid_3d h2 {
@@ -53,8 +89,21 @@ li {
   border-bottom: 0.5rem solid #000;
 }
 
+@media (min-width: 320px) and (max-width: 767px) {
+  .paid_3d h2 {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+}
+
 .paid_3d .reservation_list {
   width: 100%;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .paid_3d .reservation_list {
+    margin: 3rem 0;
+  }
 }
 
 .paid_3d .reservation_list li {
@@ -63,6 +112,12 @@ li {
   padding: 2rem;
   position: relative;
   margin: 2rem 0;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .paid_3d .reservation_list li {
+    padding: 1rem;
+  }
 }
 
 .paid_3d .reservation_list li .container {
@@ -88,6 +143,12 @@ li {
   margin-left: 1rem;
 }
 
+@media (min-width: 320px) and (max-width: 767px) {
+  .paid_3d .reservation_list li .title span {
+    display: block;
+  }
+}
+
 .paid_3d .reservation_list li .button {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -98,7 +159,7 @@ li {
   display: block;
   border: none;
   background-color: transparent;
-  color: #0078f0;
+  color: #2955EF;
   font-size: 1.4rem;
   line-height: 3.2rem;
   width: 12rem;

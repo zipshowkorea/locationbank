@@ -18,6 +18,18 @@ li {
   list-style: none;
 }
 
+button, input {
+  cursor: pointer;
+}
+
+button:focus, input:focus {
+  outline: none;
+}
+
+button {
+  border: none;
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -30,14 +42,38 @@ li {
 }
 
 .wrap {
-  width: 970px;
   margin: 0 auto;
   position: relative;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .wrap {
+    width: 32rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .wrap {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrap {
+    width: 970px;
+  }
 }
 
 .user_reservation {
   width: 57rem;
   margin: 5rem auto 10rem;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .user_reservation {
+    width: 90%;
+    margin: 2rem auto 10rem;
+  }
 }
 
 .user_reservation h2 {
@@ -53,8 +89,22 @@ li {
   border-bottom: 0.5rem solid #000;
 }
 
+@media (min-width: 320px) and (max-width: 767px) {
+  .user_reservation h2 {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+}
+
 .user_reservation .reservation_list {
   width: 100%;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .user_reservation .reservation_list {
+    margin-top: 2rem;
+    grid-gap: 2rem;
+  }
 }
 
 .user_reservation .reservation_list li {
@@ -63,6 +113,13 @@ li {
   padding: 2rem;
   position: relative;
   margin: 2rem 0;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .user_reservation .reservation_list li {
+    margin: 0;
+    padding: 1rem;
+  }
 }
 
 .user_reservation .reservation_list li .title {
@@ -77,10 +134,16 @@ li {
   position: absolute;
   right: 2rem;
   top: 2rem;
-  color: #0078f0;
+  color: #2955EF;
   font-size: 1.4rem;
   line-height: 3.2rem;
-  cursor: pointer;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .user_reservation .reservation_list li .cancel {
+    top: 1rem;
+    right: 1rem;
+  }
 }
 
 .user_reservation .reservation_list li table {
@@ -88,10 +151,31 @@ li {
   font-size: 1.6rem;
 }
 
-.user_reservation .reservation_list li table tr td:first-child {
-  width: 15%;
+.user_reservation .reservation_list li table tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.user_reservation .reservation_list li table tr td:last-child {
+.user_reservation .reservation_list li table th {
+  width: 15%;
+  font-weight: 400;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .user_reservation .reservation_list li table th {
+    min-width: 6.5rem;
+    max-width: 7rem;
+  }
+}
+
+.user_reservation .reservation_list li table td {
   color: #5d5d5d;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .user_reservation .reservation_list li table td {
+    display: inline-block;
+    padding-left: 1rem;
+  }
 }

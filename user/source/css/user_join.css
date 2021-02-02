@@ -18,6 +18,18 @@ li {
   list-style: none;
 }
 
+button, input {
+  cursor: pointer;
+}
+
+button:focus, input:focus {
+  outline: none;
+}
+
+button {
+  border: none;
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -30,19 +42,48 @@ li {
 }
 
 .wrap {
-  width: 970px;
   margin: 0 auto;
   position: relative;
 }
 
+@media (min-width: 320px) and (max-width: 767px) {
+  .wrap {
+    width: 32rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .wrap {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrap {
+    width: 970px;
+  }
+}
+
 .user_join {
   position: relative;
-  margin: 8rem 0 10rem;
+  margin: 8rem auto 10rem;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .user_join {
+    width: 90%;
+  }
 }
 
 .user_join .user_info {
   width: 32rem;
   margin: 0 auto;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .user_join .user_info {
+    width: 100%;
+  }
 }
 
 .user_join .user_info fieldset {
@@ -69,6 +110,12 @@ li {
 .user_join .user_info fieldset label {
   display: inline-block;
   width: calc(100% - 3rem);
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .user_join .user_info fieldset label {
+    font-size: 1.5rem;
+  }
 }
 
 .user_join .user_info fieldset label.essential {
@@ -125,7 +172,7 @@ li {
 }
 
 .user_join .user_info fieldset label[for=allCheck] {
-  color: #0078f0;
+  color: #2955EF;
 }
 
 .user_join .user_info fieldset .grid {
@@ -141,7 +188,7 @@ li {
 }
 
 .user_join .user_info fieldset .grid button {
-  background-color: #0078f0;
+  background-color: #2955EF;
   color: #fff;
   font-size: 1.8rem;
   font-weight: 700;

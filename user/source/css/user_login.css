@@ -18,6 +18,18 @@ li {
   list-style: none;
 }
 
+button, input {
+  cursor: pointer;
+}
+
+button:focus, input:focus {
+  outline: none;
+}
+
+button {
+  border: none;
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -30,9 +42,26 @@ li {
 }
 
 .wrap {
-  width: 970px;
   margin: 0 auto;
   position: relative;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .wrap {
+    width: 32rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .wrap {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrap {
+    width: 970px;
+  }
 }
 
 html {
@@ -47,6 +76,12 @@ html {
   width: 32rem;
   margin: 15.5rem auto;
   position: relative;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .user_index {
+    width: 90%;
+  }
 }
 
 .user_index .user_login fieldset {
@@ -98,7 +133,7 @@ html {
   width: 100%;
   padding: 1.2rem 0;
   font-size: 1.8rem;
-  background-color: #0078f0;
+  background-color: #2955EF;
   color: #fff;
   border: none;
   margin: 3rem 0 2rem;

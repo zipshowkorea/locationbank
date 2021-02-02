@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
   margin: 0;
@@ -18,6 +19,18 @@ li {
   list-style: none;
 }
 
+button, input {
+  cursor: pointer;
+}
+
+button:focus, input:focus {
+  outline: none;
+}
+
+button {
+  border: none;
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -30,20 +43,87 @@ li {
 }
 
 .wrap {
-  width: 970px;
   margin: 0 auto;
   position: relative;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .wrap {
+    width: 32rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .wrap {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrap {
+    width: 970px;
+  }
 }
 
 .detail_place {
   position: relative;
 }
 
-.detail_place h2 {
-  font-size: 2.8rem;
-  line-height: 4.9rem;
-  font-weight: 700;
-  margin: 3rem 0 1rem;
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_place {
+    background-color: #fff;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_place .wrap {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .detail_place .wrap {
+    width: 90%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_place h2 {
+    font-size: 2rem;
+    line-height: 3.5rem;
+    font-weight: 700;
+    padding: 1rem 0 0 2rem;
+  }
+  .detail_place h2:after {
+    content: '44,000원';
+    color: #2955EF;
+    position: absolute;
+    right: 2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .detail_place h2 {
+    font-size: 2.2rem;
+    line-height: 3.5rem;
+    font-weight: 700;
+    padding: 1rem 0 0 2rem;
+  }
+  .detail_place h2:after {
+    content: '44,000원';
+    color: #2955EF;
+    position: absolute;
+    right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .detail_place h2 {
+    font-size: 2.8rem;
+    line-height: 4.9rem;
+    font-weight: 700;
+    margin: 3rem 0 1rem;
+  }
 }
 
 .detail_place .vr {
@@ -52,12 +132,62 @@ li {
   position: relative;
 }
 
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_place .vr {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .detail_place .vr::before {
+    content: "126년의 역사를 자랑하는 유서깊은 성당";
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    display: block;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    color: #656565;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .detail_place .vr {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .detail_place .vr::before {
+    content: "126년의 역사를 자랑하는 유서깊은 성당";
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    display: block;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    color: #656565;
+  }
+}
+
 .detail_place .vr .cover {
   width: inherit;
   height: inherit;
   background-image: url("https://my.matterport.com/api/v2/player/models/wyZJ8NMK5ed/thumb/");
   background-size: 100% 100%;
   background-position: center;
+  position: relative;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_place .vr .cover {
+    width: 100%;
+    height: 20rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .detail_place .vr .cover {
+    width: 100%;
+    height: 40rem;
+    margin: 0 auto;
+  }
 }
 
 .detail_place .vr .cover .playBtn {
@@ -78,14 +208,58 @@ li {
 
 .detail_place .vr iframe {
   position: absolute;
-  left: 0;
-  top: 0;
   z-index: -1;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_place .vr iframe {
+    height: 20rem;
+    top: 3.8rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .detail_place .vr iframe {
+    margin: 0 auto;
+    top: 3.8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .detail_place .vr iframe {
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_place .place_info {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .detail_place .place_info {
+    display: block;
+  }
 }
 
 .detail_place .place_intro {
   width: 58rem;
   margin-right: 2rem;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_place .place_intro {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .detail_place .place_intro {
+    width: 100%;
+  }
 }
 
 .detail_place .place_intro > div {
@@ -106,6 +280,20 @@ li {
   z-index: 0;
   padding: 2rem 0 2rem;
   margin-top: 7rem;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_place .place_intro .topMenu {
+    margin: 0;
+    position: static;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .detail_place .place_intro .topMenu {
+    margin: 0;
+    position: static;
+  }
 }
 
 .detail_place .place_intro .topMenu ul {
@@ -139,15 +327,15 @@ li {
 }
 
 .detail_place .place_intro .topMenu ul.popup li:hover {
-  color: #0078f0;
+  color: #2955EF;
 }
 
 .detail_place .place_intro .topMenu ul.popup li:hover svg {
-  fill: #0078f0;
+  fill: #2955EF;
 }
 
 .detail_place .place_intro .topMenu ul.popup li:hover:before {
-  color: #0078f0;
+  color: #2955EF;
 }
 
 .detail_place .place_intro .topMenu ul.popup li:before {
@@ -164,14 +352,28 @@ li {
   cursor: pointer;
 }
 
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_place .place_intro .topMenu ul.scrollMenu li {
+    width: calc(100% / 5);
+    font-size: 1.3rem;
+  }
+}
+
 .detail_place .place_intro .topMenu ul.scrollMenu li:hover {
-  color: #0078f0;
-  border-color: #0078f0;
+  color: #2955EF;
+  border-color: #2955EF;
 }
 
 .detail_place .place_intro .topMenu ul.scrollMenu li.on {
-  color: #0078f0;
-  border-color: #0078f0;
+  color: #2955EF;
+  border-color: #2955EF;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_place .place_intro .contents {
+    width: calc(100% - 4rem);
+    margin: 0 auto;
+  }
 }
 
 .detail_place .place_intro .contents pre {
@@ -181,13 +383,44 @@ li {
   line-height: 3.2rem;
 }
 
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_place .place_intro .contents pre {
+    margin: 1rem 0 2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .detail_place .place_intro .contents pre {
+    margin: 1rem 0 2rem;
+  }
+}
+
 .detail_place .place_intro .place_img {
   width: 100%;
   margin: 7rem 0 3rem;
 }
 
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_place .place_intro .place_img {
+    margin: 3rem 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .detail_place .place_intro .place_img {
+    margin: 3rem 0;
+  }
+}
+
 .detail_place .place_intro .place_img img {
   width: 100%;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_place .place_intro .place_options {
+    width: calc(100% - 4rem);
+    margin: 0 auto;
+  }
 }
 
 .detail_place .place_intro .place_options .place_option {
@@ -217,10 +450,36 @@ li {
   vertical-align: middle;
 }
 
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_place .place_intro .place_caution, .detail_place .place_intro .place_rule {
+    width: calc(100% - 4rem);
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .detail_place .place_intro .place_caution, .detail_place .place_intro .place_rule {
+    width: calc(100% - 4rem);
+    margin: 0 auto;
+  }
+}
+
 .detail_place .place_intro .place_caution .caution, .detail_place .place_intro .place_rule .caution {
   font-size: 1.8rem;
   line-height: 3.2rem;
   color: #ff5656;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_place .place_intro .place_caution .caution, .detail_place .place_intro .place_rule .caution {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .detail_place .place_intro .place_caution .caution, .detail_place .place_intro .place_rule .caution {
+    margin-top: 1rem;
+  }
 }
 
 .detail_place .place_intro .place_caution pre, .detail_place .place_intro .place_rule pre {
@@ -230,10 +489,78 @@ li {
   line-height: 3.2rem;
 }
 
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_place .place_intro .place_caution pre, .detail_place .place_intro .place_rule pre {
+    margin: 1rem 0 2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .detail_place .place_intro .place_caution pre, .detail_place .place_intro .place_rule pre {
+    margin: 1rem 0 2rem;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_place .place_intro .place_gps {
+    width: calc(100% - 4rem);
+    margin: 0 auto 8rem;
+    position: relative;
+  }
+  .detail_place .place_intro .place_gps:after {
+    content: "길찾기";
+    display: block;
+    background-color: #2955EF;
+    color: #fff;
+    width: 100%;
+    padding: 1.8rem 0;
+    text-align: center;
+    font-size: 1.8rem;
+    position: absolute;
+    top: 22.2rem;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .detail_place .place_intro .place_gps {
+    width: calc(100% - 4rem);
+    margin: 0 auto 8rem;
+    position: relative;
+  }
+  .detail_place .place_intro .place_gps:after {
+    content: "길찾기";
+    display: block;
+    background-color: #2955EF;
+    color: #fff;
+    width: 100%;
+    padding: 1.8rem 0;
+    text-align: center;
+    font-size: 1.8rem;
+    position: absolute;
+    top: 34.2rem;
+    cursor: pointer;
+  }
+}
+
 .detail_place .place_intro .place_gps iframe {
   width: 100%;
   height: 22.2rem;
   margin-bottom: 10rem;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_place .place_intro .place_gps iframe {
+    margin: 1rem 0 10rem;
+    height: 18rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .detail_place .place_intro .place_gps iframe {
+    margin: 1rem 0 10rem;
+    height: 30rem;
+  }
 }
 
 .detail_place .place_pay {
@@ -245,10 +572,52 @@ li {
   border-bottom: none;
 }
 
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_place .place_pay {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .detail_place .place_pay {
+    width: 100vw;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: -5vw;
+    border: none;
+  }
+}
+
 .detail_place .place_pay .sticky {
   position: -webkit-sticky;
   position: sticky;
   top: 7.5rem;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_place .place_pay .sticky {
+    position: static;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .detail_place .place_pay .sticky {
+    position: static;
+  }
 }
 
 .detail_place .place_pay h3 {
@@ -258,9 +627,39 @@ li {
 
 .detail_place .place_pay #cost {
   font-size: 1.8rem;
-  color: #0078f0;
+  color: #2955EF;
   font-weight: 700;
   line-height: 3.2rem;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_place .place_pay .user_reservation {
+    width: calc(100% - 4rem);
+    padding: 2rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: calc(100vh - 11rem);
+    left: 0;
+    top: 7rem;
+    background-color: #ebebeb;
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .detail_place .place_pay .user_reservation {
+    width: 60%;
+    padding: 2rem 20%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: calc(100vh - 11rem);
+    left: 0;
+    top: 7rem;
+    background-color: #ebebeb;
+    display: none;
+  }
 }
 
 .detail_place .place_pay .user_reservation fieldset {
@@ -269,10 +668,22 @@ li {
   margin-bottom: 2rem;
 }
 
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_place .place_pay .user_reservation fieldset {
+    margin: 0 auto 3rem;
+  }
+}
+
 .detail_place .place_pay .user_reservation fieldset legend {
   font-size: 1.8rem;
   line-height: 3.2rem;
   font-weight: 700;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_place .place_pay .user_reservation fieldset legend {
+    margin-bottom: 1rem;
+  }
 }
 
 .detail_place .place_pay .user_reservation fieldset label {
@@ -292,15 +703,15 @@ li {
   margin: 0.8rem;
   margin-left: 0;
   cursor: pointer;
-  color: #0078f0;
+  color: #2955EF;
 }
 
 .detail_place .place_pay .user_reservation .reserv_select .date {
-  width: 17rem;
+  width: calc(65% - 3.5rem);
 }
 
 .detail_place .place_pay .user_reservation .reserv_select .time {
-  width: 9rem;
+  width: calc(35% - 2rem);
   margin: 0;
 }
 
@@ -362,6 +773,12 @@ li {
   display: none;
 }
 
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_place .place_pay .user_reservation .userInfo {
+    margin-bottom: 10rem;
+  }
+}
+
 .detail_place .place_pay .user_reservation .userInfo input {
   width: calc(100% - 2.4rem);
   padding: 1.2rem;
@@ -394,13 +811,77 @@ li {
 .detail_place .place_pay .user_reservation .userInfo p:before {
   content: "*";
   margin-right: 0.5rem;
-  color: #0078f0;
+  color: #2955EF;
   vertical-align: center;
 }
 
-.detail_place .place_pay button {
+.detail_place .buttonArea {
+  width: 100%;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_place .buttonArea {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+  }
+  .detail_place .buttonArea:after {
+    content: '';
+    width: 0.2rem;
+    height: 2rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    font-size: 1.8rem;
+    font-weight: 900;
+    background-color: #6486FF;
+    border-radius: 10rem;
+  }
+  .detail_place .buttonArea.noLine:after {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .detail_place .buttonArea {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+  }
+  .detail_place .buttonArea:after {
+    content: '';
+    width: 0.2rem;
+    height: 2rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    font-size: 1.8rem;
+    font-weight: 900;
+    background-color: #6486FF;
+    border-radius: 10rem;
+  }
+  .detail_place .buttonArea.noLine:after {
+    display: none;
+  }
+}
+
+.detail_place .buttonArea button {
   width: 32rem;
-  background-color: #0078f0;
+  background-color: #2955EF;
   color: #fff;
   font-size: 1.8rem;
   font-weight: 700;
@@ -409,12 +890,66 @@ li {
   cursor: pointer;
 }
 
-.detail_place .place_pay button:focus {
+.detail_place .buttonArea button:focus {
   outline: none;
 }
 
-.detail_place .place_pay button[form=userReserv] {
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_place .buttonArea button {
+    width: 50%;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .detail_place .buttonArea button {
+    width: 50%;
+    font-weight: 400;
+  }
+}
+
+.detail_place .buttonArea button[form=userReserv] {
   display: none;
+}
+
+.detail_place .buttonArea #callTohost {
+  display: none;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_place .buttonArea #callTohost {
+    width: 50vw;
+    padding: 1.8rem 0;
+    color: #fff;
+    background-color: #2955EF;
+    display: block;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .detail_place .buttonArea #callTohost {
+    width: 50vw;
+    padding: 1.8rem 0;
+    color: #fff;
+    background-color: #2955EF;
+    display: block;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_3d.wrap {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .detail_3d.wrap {
+    width: 90%;
+  }
 }
 
 .detail_3d h2 {
@@ -424,24 +959,106 @@ li {
   margin: 3rem 0 1rem;
 }
 
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_3d h2 {
+    font-size: 1.8rem;
+    padding: 0 2rem;
+    margin-top: 1rem;
+    line-height: 3.5rem;
+  }
+  .detail_3d h2:after {
+    content: '100,000원';
+    color: #2955EF;
+    position: absolute;
+    right: 2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .detail_3d h2 {
+    font-size: 1.8rem;
+    padding: 0 2rem;
+    margin-top: 1rem;
+    line-height: 3.5rem;
+  }
+  .detail_3d h2:after {
+    content: '100,000원';
+    color: #2955EF;
+    position: absolute;
+    right: 2rem;
+  }
+}
+
 .detail_3d model-viewer {
   width: 100%;
   height: 43.5rem;
   border: 0.1rem solid #ddd;
 }
 
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_3d model-viewer {
+    height: 36rem;
+    border: none;
+    border-bottom: 0.1rem solid #ddd;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .detail_3d model-viewer {
+    height: 36rem;
+  }
+}
+
 .detail_3d .model_info {
-  margin: 3rem 0 10rem;
+  margin: 0 0 10rem;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_3d .model_info.container {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .detail_3d .model_info.container {
+    display: block;
+  }
 }
 
 .detail_3d .model_intro {
   width: calc(100% - 39.5rem);
   margin-right: 2.5rem;
+  margin-top: 3rem;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_3d .model_intro {
+    width: calc(100% - 6rem);
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .detail_3d .model_intro {
+    width: 100%;
+  }
 }
 
 .detail_3d .model_intro h3 {
   font-size: 1.8rem;
   line-height: 3.2rem;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_3d .model_intro h3 {
+    margin-top: 3rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .detail_3d .model_intro h3 {
+    margin-top: 3rem;
+  }
 }
 
 .detail_3d .model_intro pre {
@@ -451,69 +1068,158 @@ li {
   word-break: keep-all;
 }
 
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_3d .model_intro pre {
+    word-break: break-all;
+  }
+}
+
 .detail_3d .model_pay {
   width: 31.6rem;
   border: 0.2rem solid #f3f3f4;
   border-top: none;
   border-bottom: none;
   padding: 0 2.5rem;
+  margin-top: 3rem;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_3d .model_pay {
+    width: calc(100% - 4rem);
+    margin: 0 auto;
+    padding: 0;
+    border: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .detail_3d .model_pay {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    border: none;
+  }
+}
+
+.detail_3d .model_pay h3 {
   font-size: 1.8rem;
   line-height: 3.2rem;
 }
 
-.detail_3d .model_pay .price {
-  color: #656565;
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_3d .model_pay h3 {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .detail_3d .model_pay h3 {
+    display: none;
+  }
 }
 
 .detail_3d .model_pay .container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  font-size: 1.8rem;
 }
 
-.detail_3d .model_pay input {
-  display: inline-block;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-weight: 700;
-  color: #0078f0;
-  background-color: transparent;
-  border: none;
+.detail_3d .model_pay .container input {
   text-align: right;
   font-size: 1.8rem;
-  line-height: 3.2rem;
+  background-color: transparent;
+  color: #2955EF;
+  font-weight: 700;
 }
 
-.detail_3d .model_pay table {
-  margin: 0;
-  width: 100%;
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_3d .model_pay .container label, .detail_3d .model_pay .container input {
+    display: none;
+  }
 }
 
-.detail_3d .model_pay th {
-  text-align: left;
-  color: #656565;
-  font-weight: 400;
-}
-
-.detail_3d .model_pay td {
-  text-align: right;
+@media (min-width: 768px) and (max-width: 1023px) {
+  .detail_3d .model_pay .container label, .detail_3d .model_pay .container input {
+    display: none;
+  }
 }
 
 .detail_3d .model_pay button {
   width: 100%;
-  padding: 1.2rem;
-  color: #fff;
-  background-color: #0078f0;
+  padding: 1.8rem 0;
   font-size: 1.8rem;
+  color: #fff;
   font-weight: 700;
-  border: none;
-  cursor: pointer;
-  margin: 3rem 0 0;
+  background-color: #2955EF;
+  margin: 3rem 0;
 }
 
-.detail_3d .model_pay button:focus {
-  outline: none;
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_3d .model_pay button {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .detail_3d .model_pay button {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+  }
+}
+
+.detail_3d .model_pay table {
+  width: 100%;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .detail_3d .model_pay table {
+    width: 100%;
+    margin-top: 3rem;
+  }
+  .detail_3d .model_pay table:before {
+    content: '모델링 정보';
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 3.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .detail_3d .model_pay table {
+    width: 100%;
+    margin-top: 3rem;
+  }
+  .detail_3d .model_pay table:before {
+    content: '모델링 정보';
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 3.5rem;
+  }
+}
+
+.detail_3d .model_pay table tr {
+  width: 100%;
+  font-size: 1.8rem;
+}
+
+.detail_3d .model_pay table tr th {
+  width: 50%;
+  text-align: left;
+  font-weight: 400;
+  line-height: 3.2rem;
+  color: #656565;
+}
+
+.detail_3d .model_pay table tr td {
+  width: 50%;
+  text-align: right;
+  line-height: 3.2rem;
 }
 
 .modal {
@@ -538,6 +1244,12 @@ li {
   position: relative;
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .modal .wrap {
+    width: 100%;
+  }
+}
+
 .modal_header {
   width: 100%;
   height: 5rem;
@@ -557,6 +1269,12 @@ li {
   cursor: pointer;
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .modal_header p {
+    right: 5%;
+  }
+}
+
 .modal #gallery {
   width: 80%;
   margin: 0 auto;
@@ -565,6 +1283,18 @@ li {
 
 .modal #gallery.open {
   display: block;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .modal #gallery.open {
+    width: 90%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .modal #gallery.open {
+    width: 90%;
+  }
 }
 
 .modal #gallery img {
@@ -583,9 +1313,33 @@ li {
   display: none;
 }
 
+@media (min-width: 320px) and (max-width: 767px) {
+  .modal #drone {
+    width: 90%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .modal #drone {
+    width: 90%;
+  }
+}
+
 .modal #drone iframe {
   width: 100%;
   height: calc(100% - 5rem);
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .modal #drone iframe {
+    height: 30rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .modal #drone iframe {
+    height: 50rem;
+  }
 }
 
 .modal #drone.open {

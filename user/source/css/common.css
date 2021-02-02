@@ -20,12 +20,15 @@ li {
 }
 
 button, input {
-  border: none;
   cursor: pointer;
 }
 
 button:focus, input:focus {
   outline: none;
+}
+
+button {
+  border: none;
 }
 
 .container {
@@ -44,13 +47,13 @@ button:focus, input:focus {
   position: relative;
 }
 
-@media (min-width: 335px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .wrap {
-    width: 100%;
+    width: 32rem;
   }
 }
 
-@media (min-width: 758px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .wrap {
     width: 80%;
   }
@@ -82,12 +85,15 @@ li {
 }
 
 button, input {
-  border: none;
   cursor: pointer;
 }
 
 button:focus, input:focus {
   outline: none;
+}
+
+button {
+  border: none;
 }
 
 .container {
@@ -106,13 +112,13 @@ button:focus, input:focus {
   position: relative;
 }
 
-@media (min-width: 335px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .wrap {
-    width: 100%;
+    width: 32rem;
   }
 }
 
-@media (min-width: 758px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .wrap {
     width: 80%;
   }
@@ -132,7 +138,7 @@ header {
   position: sticky;
   top: 0;
   background-color: #fff;
-  z-index: 1;
+  z-index: 2;
 }
 
 header:after {
@@ -143,9 +149,15 @@ header .wrap {
   height: 100%;
 }
 
-@media (min-width: 335px) {
+@media (min-width: 320px) and (max-width: 767px) {
   header .wrap {
-    width: 100%;
+    width: 90%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  header .wrap {
+    width: 90%;
   }
 }
 
@@ -155,62 +167,56 @@ header .container {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-@media (min-width: 335px) {
-  header .container {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-}
-
-@media (min-width: 335px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   header .container h1 {
-    margin-left: 3rem;
+    margin-right: 12rem;
   }
 }
 
 @media (min-width: 1024px) {
   header .container h1 {
-    margin-right: 41.5rem;
+    margin-right: 45.5rem;
   }
 }
 
 header .container input[type=search] {
   width: 30rem;
   padding: 0 1rem;
+  border: none;
   border-bottom: 1px solid #737373;
-  margin-right: 1.9rem;
 }
 
-@media (min-width: 335px) {
+@media (min-width: 320px) and (max-width: 767px) {
   header .container input[type=search] {
     display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  header .container input[type=search] {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  header .container input[type=search] {
+    display: block;
   }
 }
 
 header .container button {
   font-size: 2.5rem;
   background-color: transparent;
-}
-
-@media (min-width: 335px) {
-  header .container button {
-    margin-right: 5.8rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  header .container button {
-    margin-right: 3.9rem;
-  }
+  margin-right: 4rem;
 }
 
 header .container .ham {
   cursor: pointer;
-  width: 5.8rem;
-  height: 5.8rem;
   position: absolute;
   right: 0;
   top: 50%;
@@ -223,11 +229,6 @@ header .container .ham span {
   height: .2rem;
   display: block;
   background-color: #474747;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
 }
 
 header .container .ham span:before, header .container .ham span:after {
@@ -256,9 +257,15 @@ header .menu {
   display: none;
 }
 
-@media (min-width: 335px) {
+@media (min-width: 320px) and (max-width: 767px) {
   header .menu {
     width: 100vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  header .menu {
+    width: 50vw;
   }
 }
 
@@ -313,7 +320,13 @@ header .menu .welcome {
   font-size: 1.8rem;
 }
 
-@media (min-width: 335px) {
+@media (min-width: 320px) and (max-width: 767px) {
+  header .menu .welcome {
+    width: 90%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
   header .menu .welcome {
     width: 90%;
   }
@@ -333,6 +346,12 @@ header .menu .welcome h2 {
   line-height: 3.2rem;
 }
 
+@media (min-width: 320px) and (max-width: 767px) {
+  header .menu .welcome h2 {
+    font-size: 1.6rem;
+  }
+}
+
 header .menu .welcome p {
   line-height: 3.2rem;
   color: #656565;
@@ -344,8 +363,8 @@ header .menu .welcome a {
   width: 100%;
   padding: 1rem 0;
   text-align: center;
-  border: 1px solid #0078f0;
-  color: #0078f0;
+  border: 1px solid #2955EF;
+  color: #2955EF;
   font-weight: 700;
 }
 
@@ -353,7 +372,13 @@ header .menu .gnb {
   margin: 0 auto;
 }
 
-@media (min-width: 335px) {
+@media (min-width: 320px) and (max-width: 767px) {
+  header .menu .gnb {
+    width: 90%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
   header .menu .gnb {
     width: 90%;
   }
@@ -382,6 +407,18 @@ footer {
   color: rgba(255, 255, 255, 0.5);
   background-color: #555;
   border-top: 0.1rem solid #777;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  footer {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  footer {
+    display: none;
+  }
 }
 
 footer .inner {
