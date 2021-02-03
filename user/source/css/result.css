@@ -130,6 +130,15 @@ button {
   font-weight: 400;
 }
 
+.result_reservation a[href='paid_3D.html'] {
+  display: block;
+  width: 100%;
+  padding: 0.8rem 0;
+  background-color: #2955EF;
+  color: #fff;
+  text-align: center;
+}
+
 .modal {
   width: 100%;
   height: 100vh;
