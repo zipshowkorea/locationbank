@@ -128,7 +128,7 @@ button {
   font-weight: 700;
 }
 
-.user_reservation .reservation_list li .cancel {
+.user_reservation .reservation_list li .reservCancel {
   border: none;
   background-color: transparent;
   position: absolute;
@@ -140,7 +140,7 @@ button {
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-  .user_reservation .reservation_list li .cancel {
+  .user_reservation .reservation_list li .reservCancel {
     top: 1rem;
     right: 1rem;
   }

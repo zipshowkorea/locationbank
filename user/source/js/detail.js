@@ -1,5 +1,21 @@
 $(document).ready(function() {
 
+    // 찜버튼 기능
+    $('.favorite').click(function() {
+        $(this).toggleClass('on');
+    });
+
+    $('.share').click(function(){
+        var url = window.document.location.href;
+        var dummy = document.createElement('textarea');
+        document.body.appendChild(dummy);
+        dummy.value = url;
+        dummy.select();
+        document.execCommand('copy');
+        document.body.removeChild(dummy);
+        alert('주소가 복사되었습니다. 다른 곳에 붙여넣기 해보세요.');
+    });
+    
     // vr play btn click event
     $('.playBtn i').click(function(){
         $(this).removeClass('xi-play-circle-o').addClass('xi-spinner-1 xi-spin');

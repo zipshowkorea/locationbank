@@ -4,10 +4,7 @@ $(document).ready(function(){
     $('.popular_list').addClass('swiper-wrapper');
     $('.popular_list').removeClass('grid');
     $('.popular_list li').addClass('swiper-slide');
-    $('#search').addClass('swiper-container');
-    $('.search_list').addClass('swiper-wrapper');
-    $('.search_list').removeClass('grid');
-    $('.search_list li').addClass('swiper-slide');
+    
     
     var swiper1 = new Swiper('#popular', {
       breakpoints: {
@@ -52,11 +49,7 @@ $(document).ready(function(){
     $('.popular_list').removeClass('swiper-wrapper');
     $('.popular_list').addClass('grid');
     $('.popular_list li').removeClass('swiper-slide');
-    $('#search').removeClass('swiper-container');
-    $('.search_list').removeClass('swiper-wrapper');
-    $('.search_list').addClass('grid');
-    $('.search_list li').removeClass('swiper-slide');
-
+   
     var swiper1 = new Swiper('#popular', {
       breakpoints: {
         320: {
@@ -104,10 +97,6 @@ $(window).resize(function() {
       $('.popular_list').addClass('swiper-wrapper');
       $('.popular_list').removeClass('grid');
       $('.popular_list li').addClass('swiper-slide');
-      $('#search').addClass('swiper-container');
-      $('.search_list').addClass('swiper-wrapper');
-      $('.search_list').removeClass('grid');
-      $('.search_list li').addClass('swiper-slide');
       
       var swiper1 = new Swiper('#popular', {
         breakpoints: {
@@ -151,10 +140,6 @@ $(window).resize(function() {
       $('.popular_list').removeClass('swiper-wrapper');
       $('.popular_list').addClass('grid');
       $('.popular_list li').removeClass('swiper-slide').css({'margin-right':'0','width':'23.5rem'});
-      $('#search').removeClass('swiper-container');
-      $('.search_list').removeClass('swiper-wrapper');
-      $('.search_list').addClass('grid');
-      $('.search_list li').removeClass('swiper-slide');
 
       var swiper1 = new Swiper('#popular', {
         breakpoints: {

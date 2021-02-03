@@ -184,7 +184,20 @@ header .container {
   }
 }
 
-header .container input[type=search] {
+header .container h1 svg {
+  width: 13rem;
+}
+
+header .container .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+header .container .search input[type=search] {
   width: 30rem;
   padding: 0 1rem;
   border: none;
@@ -192,24 +205,25 @@ header .container input[type=search] {
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-  header .container input[type=search] {
+  header .container .search input[type=search] {
     display: none;
+    width: 60vw;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  header .container input[type=search] {
+  header .container .search input[type=search] {
     display: none;
   }
 }
 
 @media (min-width: 1024px) {
-  header .container input[type=search] {
+  header .container .search input[type=search] {
     display: block;
   }
 }
 
-header .container button {
+header .container .search button {
   font-size: 2.5rem;
   background-color: transparent;
   margin-right: 4rem;
@@ -609,26 +623,23 @@ footer .divide {
           transform: translate(-50%, -50%);
 }
 
+.main .search, .search_result .search {
+  position: relative;
+  padding-bottom: 10rem;
+  width: 100%;
+}
+
 .main .search .more, .search_result .search .more {
   display: none;
 }
 
-.main .search, .search_result .search {
-  padding-bottom: 10rem;
-}
-
-.main .popular, .main .search, .search_result .popular, .search_result .search {
-  position: relative;
-  width: 100%;
-}
-
-.main .popular h2, .main .search h2, .search_result .popular h2, .search_result .search h2 {
+.main .search h2, .search_result .search h2 {
   font-size: 2.4rem;
   font-weight: 700;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-  .main .popular h2, .main .search h2, .search_result .popular h2, .search_result .search h2 {
+  .main .search h2, .search_result .search h2 {
     text-align: center;
     font-size: 2rem;
     line-height: 3.5rem;
@@ -636,58 +647,24 @@ footer .divide {
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  .main .popular h2, .main .search h2, .search_result .popular h2, .search_result .search h2 {
+  .main .search h2, .search_result .search h2 {
     text-align: center;
     font-size: 2.2rem;
   }
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
-  .main .popular .more, .main .search .more, .search_result .popular .more, .search_result .search .more {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .main .popular .more, .main .search .more, .search_result .popular .more, .search_result .search .more {
-    display: none;
-  }
-}
-
-@media (min-width: 1024px) {
-  .main .popular .more, .main .search .more, .search_result .popular .more, .search_result .search .more {
-    position: absolute;
-    right: 0;
-    top: 0;
-    font-size: 2rem;
-    line-height: 3.5rem;
-  }
-}
-
-.main .popular .search_title, .main .search .search_title, .search_result .popular .search_title, .search_result .search .search_title {
+.main .search .search_title, .search_result .search .search_title {
   text-align: center;
   font-size: 2.4rem;
   line-height: 4.2rem;
   margin: 3rem 0 4rem;
 }
 
-.main .popular .search_title .keyword, .main .search .search_title .keyword, .search_result .popular .search_title .keyword, .search_result .search .search_title .keyword {
+.main .search .search_title .keyword, .search_result .search .search_title .keyword {
   color: #2955EF;
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
-  .main .popular:not(.search) .swiper-container, .main .search:not(.search) .swiper-container, .search_result .popular:not(.search) .swiper-container, .search_result .search:not(.search) .swiper-container {
-    margin-left: 2rem;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .main .popular:not(.search) .swiper-container, .main .search:not(.search) .swiper-container, .search_result .popular:not(.search) .swiper-container, .search_result .search:not(.search) .swiper-container {
-    margin-left: 2rem;
-  }
-}
-
-.main .popular_list, .main .search_list, .search_result .popular_list, .search_result .search_list {
+.main .search_list, .search_result .search_list {
   width: 100%;
   margin: 1rem 0;
   -ms-grid-columns: (1fr)[4];
@@ -695,7 +672,27 @@ footer .divide {
   grid-gap: 3rem 1rem;
 }
 
-.main .popular_list li, .main .search_list li, .search_result .popular_list li, .search_result .search_list li {
+@media (min-width: 320px) and (max-width: 767px) {
+  .main .search_list, .search_result .search_list {
+    width: 90%;
+    margin: 0 auto;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main .search_list, .search_result .search_list {
+    width: 90%;
+    margin: 0 auto;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+  }
+}
+
+.main .search_list li, .search_result .search_list li {
   width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -704,7 +701,7 @@ footer .divide {
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-  .main .popular_list li, .main .search_list li, .search_result .popular_list li, .search_result .search_list li {
+  .main .search_list li, .search_result .search_list li {
     background-color: #fff;
     -webkit-box-shadow: 0 0.2rem 0.2rem #d9d9d9;
             box-shadow: 0 0.2rem 0.2rem #d9d9d9;
@@ -712,24 +709,24 @@ footer .divide {
 }
 
 @media (min-width: 1024px) {
-  .main .popular_list li, .main .search_list li, .search_result .popular_list li, .search_result .search_list li {
+  .main .search_list li, .search_result .search_list li {
     width: 23.5rem;
     height: 23rem;
   }
 }
 
-.main .popular_list li:hover .imgarea img, .main .search_list li:hover .imgarea img, .search_result .popular_list li:hover .imgarea img, .search_result .search_list li:hover .imgarea img {
+.main .search_list li:hover .imgarea img, .search_result .search_list li:hover .imgarea img {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-transition: all 1s ease-in;
   transition: all 1s ease-in;
 }
 
-.main .popular_list li a, .main .search_list li a, .search_result .popular_list li a, .search_result .search_list li a {
+.main .search_list li a, .search_result .search_list li a {
   display: block;
 }
 
-.main .popular_list li a .imgarea, .main .search_list li a .imgarea, .search_result .popular_list li a .imgarea, .search_result .search_list li a .imgarea {
+.main .search_list li a .imgarea, .search_result .search_list li a .imgarea {
   width: 100%;
   overflow: hidden;
   display: -webkit-box;
@@ -743,43 +740,42 @@ footer .divide {
           justify-content: center;
 }
 
-.main .popular_list li a .imgarea img, .main .search_list li a .imgarea img, .search_result .popular_list li a .imgarea img, .search_result .search_list li a .imgarea img {
+.main .search_list li a .imgarea img, .search_result .search_list li a .imgarea img {
   -webkit-transition: all 1s ease-in;
   transition: all 1s ease-in;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-  .main .popular_list li a .imgarea img, .main .search_list li a .imgarea img, .search_result .popular_list li a .imgarea img, .search_result .search_list li a .imgarea img {
-    width: auto;
-    height: 18rem;
+  .main .search_list li a .imgarea img, .search_result .search_list li a .imgarea img {
+    width: 100%;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  .main .popular_list li a .imgarea img, .main .search_list li a .imgarea img, .search_result .popular_list li a .imgarea img, .search_result .search_list li a .imgarea img {
+  .main .search_list li a .imgarea img, .search_result .search_list li a .imgarea img {
     width: 100%;
   }
 }
 
 @media (min-width: 1024px) {
-  .main .popular_list li a .imgarea img, .main .search_list li a .imgarea img, .search_result .popular_list li a .imgarea img, .search_result .search_list li a .imgarea img {
+  .main .search_list li a .imgarea img, .search_result .search_list li a .imgarea img {
     width: 100%;
   }
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-  .main .popular_list li a p, .main .search_list li a p, .search_result .popular_list li a p, .search_result .search_list li a p {
+  .main .search_list li a p, .search_result .search_list li a p {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  .main .popular_list li a p, .main .search_list li a p, .search_result .popular_list li a p, .search_result .search_list li a p {
+  .main .search_list li a p, .search_result .search_list li a p {
     padding: 0 1rem;
   }
 }
 
-.main .popular_list li a .title, .main .search_list li a .title, .search_result .popular_list li a .title, .search_result .search_list li a .title {
+.main .search_list li a .title, .search_result .search_list li a .title {
   font-size: 1.8rem;
   font-weight: 700;
   line-height: 3.2rem;
@@ -788,7 +784,7 @@ footer .divide {
   margin: 1rem 0;
 }
 
-.main .popular_list li a .price, .main .search_list li a .price, .search_result .popular_list li a .price, .search_result .search_list li a .price {
+.main .search_list li a .price, .search_result .search_list li a .price {
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 2.5rem;
@@ -796,7 +792,194 @@ footer .divide {
   margin-bottom: 1rem;
 }
 
-.main .popular_list li a .price span, .main .search_list li a .price span, .search_result .popular_list li a .price span, .search_result .search_list li a .price span {
+.main .search_list li a .price span, .search_result .search_list li a .price span {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 2.8rem;
+  color: #2955EF;
+  margin-right: .4rem;
+}
+
+.main .popular, .search_result .popular {
+  position: relative;
+  width: 100%;
+}
+
+.main .popular h2, .search_result .popular h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .main .popular h2, .search_result .popular h2 {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 3.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main .popular h2, .search_result .popular h2 {
+    text-align: center;
+    font-size: 2.2rem;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .main .popular .more, .search_result .popular .more {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main .popular .more, .search_result .popular .more {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main .popular .more, .search_result .popular .more {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 2rem;
+    line-height: 3.5rem;
+  }
+}
+
+.main .popular .search_title, .search_result .popular .search_title {
+  text-align: center;
+  font-size: 2.4rem;
+  line-height: 4.2rem;
+  margin: 3rem 0 4rem;
+}
+
+.main .popular .search_title .keyword, .search_result .popular .search_title .keyword {
+  color: #2955EF;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .main .popular:not(.search) .swiper-container, .search_result .popular:not(.search) .swiper-container {
+    margin-left: 2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main .popular:not(.search) .swiper-container, .search_result .popular:not(.search) .swiper-container {
+    margin-left: 2rem;
+  }
+}
+
+.main .popular_list, .search_result .popular_list {
+  width: 100%;
+  margin: 1rem 0;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 3rem 1rem;
+}
+
+.main .popular_list li, .search_result .popular_list li {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background-color: #fff;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .main .popular_list li, .search_result .popular_list li {
+    background-color: #fff;
+    -webkit-box-shadow: 0 0.2rem 0.2rem #d9d9d9;
+            box-shadow: 0 0.2rem 0.2rem #d9d9d9;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main .popular_list li, .search_result .popular_list li {
+    width: 23.5rem;
+    height: 23rem;
+  }
+}
+
+.main .popular_list li:hover .imgarea img, .search_result .popular_list li:hover .imgarea img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+}
+
+.main .popular_list li a, .search_result .popular_list li a {
+  display: block;
+}
+
+.main .popular_list li a .imgarea, .search_result .popular_list li a .imgarea {
+  width: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .popular_list li a .imgarea img, .search_result .popular_list li a .imgarea img {
+  -webkit-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .main .popular_list li a .imgarea img, .search_result .popular_list li a .imgarea img {
+    width: auto;
+    height: 18rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main .popular_list li a .imgarea img, .search_result .popular_list li a .imgarea img {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main .popular_list li a .imgarea img, .search_result .popular_list li a .imgarea img {
+    width: 100%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .main .popular_list li a p, .search_result .popular_list li a p {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main .popular_list li a p, .search_result .popular_list li a p {
+    padding: 0 1rem;
+  }
+}
+
+.main .popular_list li a .title, .search_result .popular_list li a .title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 3.2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 1rem 0;
+}
+
+.main .popular_list li a .price, .search_result .popular_list li a .price {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  color: #9c9c9c;
+  margin-bottom: 1rem;
+}
+
+.main .popular_list li a .price span, .search_result .popular_list li a .price span {
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 2.8rem;

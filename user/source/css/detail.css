@@ -318,6 +318,14 @@ button {
   cursor: pointer;
 }
 
+.detail_place .place_intro .topMenu ul.popup li.on {
+  color: #2955EF;
+}
+
+.detail_place .place_intro .topMenu ul.popup li.on svg {
+  fill: #2955EF;
+}
+
 .detail_place .place_intro .topMenu ul.popup li svg {
   width: 4rem;
   height: 4rem;

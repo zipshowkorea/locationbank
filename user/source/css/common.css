@@ -184,7 +184,20 @@ header .container {
   }
 }
 
-header .container input[type=search] {
+header .container h1 svg {
+  width: 13rem;
+}
+
+header .container .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+header .container .search input[type=search] {
   width: 30rem;
   padding: 0 1rem;
   border: none;
@@ -192,24 +205,25 @@ header .container input[type=search] {
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-  header .container input[type=search] {
+  header .container .search input[type=search] {
     display: none;
+    width: 60vw;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  header .container input[type=search] {
+  header .container .search input[type=search] {
     display: none;
   }
 }
 
 @media (min-width: 1024px) {
-  header .container input[type=search] {
+  header .container .search input[type=search] {
     display: block;
   }
 }
 
-header .container button {
+header .container .search button {
   font-size: 2.5rem;
   background-color: transparent;
   margin-right: 4rem;

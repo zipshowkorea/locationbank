@@ -232,3 +232,49 @@ button {
   height: 7.5rem;
   margin: 0;
 }
+
+.modal {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  display: none;
+}
+
+.modal div {
+  width: 32rem;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 5rem 0 10rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .modal div {
+    width: 90%;
+  }
+}
+
+.modal div h2 {
+  margin-bottom: 3rem;
+}
+
+.modal div button {
+  width: 100%;
+  padding: 2rem 0;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #2955EF;
+  color: #fff;
+  font-size: 1.8rem;
+}

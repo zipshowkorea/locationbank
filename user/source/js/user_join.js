@@ -34,6 +34,7 @@ function joinBtn() {
     if(!selectAll) {
         alert('필수 항목을 동의해 주세요');
     } else {
-        $('button[form=userJoin]').attr({'type':'submit','onclick':''})
+        $('.modal').css({'display':'block'});
+        $('body').css({'overflow':'hidden'});
     }
 };

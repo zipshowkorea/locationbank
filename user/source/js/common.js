@@ -21,3 +21,15 @@ $(document).ready(function(){
         }
     }
 });
+
+function search() {
+    var windowWidth = $(window).width();
+
+    if(320 <= windowWidth && windowWidth < 1024) {
+        var inputSearch = $('#header_search');
+        inputSearch.css({'display':'block'});
+    }
+}
+
+
+
