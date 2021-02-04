@@ -938,6 +938,7 @@ footer .divide {
 
 .main .popular_list li a .imgarea, .search_result .popular_list li a .imgarea {
   width: 100%;
+  height: 15rem;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
