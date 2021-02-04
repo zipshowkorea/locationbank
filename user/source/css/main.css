@@ -503,7 +503,7 @@ footer .divide {
 
 .main .banner, .search_result .banner {
   width: 100%;
-  background-color: #d8f3ff;
+  background-image: url(../img/mainbanner.jpg);
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
