@@ -210,12 +210,6 @@ header .container .search input[type=search] {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
-  header .container .search input[type=search] {
-    display: none;
-  }
-}
-
 @media (min-width: 1024px) {
   header .container .search input[type=search] {
     display: block;
