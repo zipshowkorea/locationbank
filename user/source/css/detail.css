@@ -1082,6 +1082,10 @@ button {
   }
 }
 
+.detail_3d .model_intro > div {
+  margin-top: 2rem;
+}
+
 .detail_3d .model_pay {
   width: 31.6rem;
   border: 0.2rem solid #f3f3f4;
