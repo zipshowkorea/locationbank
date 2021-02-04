@@ -206,7 +206,13 @@ header .container .search input[type=search] {
 
 @media (min-width: 320px) and (max-width: 767px) {
   header .container .search input[type=search] {
-    width: 60vw;
+    width: 25vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  header .container .search input[type=search] {
+    width: 40vw;
   }
 }
 

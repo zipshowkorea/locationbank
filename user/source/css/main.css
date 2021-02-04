@@ -206,7 +206,13 @@ header .container .search input[type=search] {
 
 @media (min-width: 320px) and (max-width: 767px) {
   header .container .search input[type=search] {
-    width: 60vw;
+    width: 25vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  header .container .search input[type=search] {
+    width: 40vw;
   }
 }
 
@@ -503,7 +509,25 @@ footer .divide {
 
 .main .banner, .search_result .banner {
   width: 100%;
-  background-image: url(../img/mainbanner.jpg);
+  background-color: #f8eac3;
+  background-image: url(../img/mainbanner.png);
+  background-repeat: no-repeat;
+  background-size: 50rem;
+  background-position: right 5rem bottom -6.8rem;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .main .banner, .search_result .banner {
+    background-size: 25rem;
+    background-position: right -3rem bottom -3rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main .banner, .search_result .banner {
+    background-size: 52rem;
+    background-position: right 5rem bottom -8rem;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
@@ -535,6 +559,12 @@ footer .divide {
   line-height: 2.8rem;
   font-weight: 700;
   margin-bottom: 1.85rem;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .main .banner .content h2, .search_result .banner .content h2 {
+    font-size: 1.8rem;
+  }
 }
 
 .main .category, .search_result .category {
@@ -734,6 +764,7 @@ footer .divide {
 }
 
 .main .search_list li a .imgarea img, .search_result .search_list li a .imgarea img {
+  height: 15rem;
   -webkit-transition: all 1s ease-in;
   transition: all 1s ease-in;
 }
