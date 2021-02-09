@@ -1214,9 +1214,27 @@ footer .divide {
   z-index: 0;
 }
 
+@media (min-width: 320px) and (max-width: 767px) {
+  .main .modelling .swiper-button-prev, .search_result .modelling .swiper-button-prev {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main .modelling .swiper-button-prev, .search_result .modelling .swiper-button-prev {
+    display: none;
+  }
+}
+
 .main .modelling .swiper-button-next, .search_result .modelling .swiper-button-next {
   right: -5rem;
   z-index: 0;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .main .modelling .swiper-button-next, .search_result .modelling .swiper-button-next {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
