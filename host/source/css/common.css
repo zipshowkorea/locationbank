@@ -62,6 +62,10 @@ li {
   margin-right: 8rem;
 }
 
+.host .header_body h1 svg {
+  width: 13rem;
+}
+
 .host .header_body .gnb {
   font-size: 1.6rem;
   line-height: 3.5rem;
